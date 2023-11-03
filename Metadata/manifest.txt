@@ -1,0 +1,6 @@
+Manifest file for knb-lter-mcr.1.22.zip created on Fri Nov 03 14:22:30 UTC 2023
+MCR_LTER_Porites_rus_Long_Term_Trends_Richness_20160426.csv (331 bytes)
+MCR_LTER_Porites_rus_Long_Term_Trends_Abundance_20160426.csv (305 bytes)
+knb-lter-mcr.1.22.xml (29466 bytes)
+knb-lter-mcr.1.22.txt (14395 bytes)
+knb-lter-mcr.1.22.report.xml (32567 bytes)
