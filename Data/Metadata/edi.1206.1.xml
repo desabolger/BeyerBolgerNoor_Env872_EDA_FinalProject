@@ -1,0 +1,1068 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eml:eml packageId="edi.1206.1" system="https://pasta.edirepository.org"
+  xmlns:eml="https://eml.ecoinformatics.org/eml-2.2.0"
+  xmlns:stmml="http://www.xml-cml.org/schema/stmml-1.2"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="https://eml.ecoinformatics.org/eml-2.2.0 https://eml.ecoinformatics.org/eml-2.2.0/eml.xsd">
+  <access
+    authSystem="https://pasta.edirepository.org/authentication"
+    order="allowFirst" scope="document"
+      system="https://pasta.edirepository.org">
+    <allow><principal>uid=EDI,o=EDI,dc=edirepository,dc=org</principal><permission>all</permission></allow><allow>
+      <principal>https://orcid.org/0000-0003-4072-5623</principal>
+      <permission>all</permission>
+    </allow>
+    <allow>
+      <principal>public</principal>
+      <permission>read</permission>
+    </allow>
+  </access>
+  <dataset>
+    <alternateIdentifier
+        system="https://doi.org">doi:10.6073/pasta/601ae427b99c240e6df52c0737efbab3</alternateIdentifier><title>Seagrass growth rates and physical characteristics and measures of water temperature and salinity during a simulated green turtle grazing experiment in The Bahamas, 1999 – 2000.</title>
+    <creator>
+      <individualName>
+        <salutation>Dr. </salutation>
+        <givenName>Robert</givenName>
+        <givenName>A</givenName>
+        <surName>Johnson</surName>
+      </individualName>
+      <organizationName>University of Wisconsin-Madison</organizationName>
+      <electronicMailAddress>robert.a.johnson@wisc.edu</electronicMailAddress>
+      <userId
+        directory="https://orcid.org">0000-0003-4072-5623</userId>
+    </creator>
+    <creator>
+      <individualName>
+        <salutation>Dr. </salutation>
+        <givenName>Kathleen</givenName>
+        <givenName>M</givenName>
+        <surName>Hanes</surName>
+      </individualName>
+      <organizationName>Washington University in St. Louis</organizationName>
+      <electronicMailAddress>khanes@wustl.edu</electronicMailAddress>
+    </creator>
+    <creator>
+      <individualName>
+        <salutation>Dr.</salutation>
+        <givenName>Alan</givenName>
+        <givenName>B</givenName>
+        <surName>Bolten</surName>
+      </individualName>
+      <organizationName>University of Florida</organizationName>
+      <electronicMailAddress>abolten@ufl.edu</electronicMailAddress>
+      <userId
+        directory="https://orcid.org">0000-0002-4834-2742</userId>
+    </creator>
+    <creator>
+      <individualName>
+        <salutation>Dr.</salutation>
+        <givenName>Karen</givenName>
+        <givenName>A</givenName>
+        <surName>Bjorndal</surName>
+      </individualName>
+      <organizationName>University of Florida</organizationName>
+      <electronicMailAddress>bjorndal@ufl.edu</electronicMailAddress>
+      <userId
+      directory="https://orcid.org">0000-0002-6286-1901</userId>
+    </creator>
+    <pubDate>2022-09-01</pubDate><abstract>This data set contains data from an experiment in which green turtle grazing was simulated in a Thalassia testudinum seagrass meadow in The Bahamas from July 1999 until December 2000. Measurements of water temperature and salinity were collected weekly. Seagrass meadow physical characteristics--blade length, blade width, number of blades per shoot, shoot density, and leaf area index--along with growth rates (both linear growth and production) were measured at various temporal intervals. Measurements were made in each of three treatments: 1) an unclipped reference treatment (representing ungrazed seagrass) in which measurements began in July 1999, 2) an experimentally clipped treatment (representing grazing) in which measurements began in July 1999, and 3) an experimentally clipped treatment (representing grazing) in which measurements began in February 2000. Data were used to investigate relationships between water temperature and salinity on seagrass growth and physical characteristics and how these relationships are affected by green turtle grazing.</abstract>
+    <keywordSet>
+      <keyword>seagrass</keyword>
+      <keyword>grazing</keyword>
+      <keyword>plant growth</keyword>
+      <keyword>aboveground production</keyword>
+      <keyword>leaf area index</keyword>
+      <keyword>water temperature</keyword>
+      <keyword>salinity</keyword>
+      <keywordThesaurus>LTER Controlled Vocabulary</keywordThesaurus>
+    </keywordSet>
+    <keywordSet>
+      <keyword>The Bahamas</keyword>
+    </keywordSet>
+    <intellectualRights>This information is released under the Creative Commons license - Attribution - CC BY (https://creativecommons.org/licenses/by/4.0/). The consumer of these data ("Data User" herein) is required to cite it appropriately in any publication that results from its use. The Data User should realize that these data may be actively used by others for ongoing research and that coordination may be necessary to prevent duplicate publication. The Data User is urged to contact the authors of these data if any questions about methodology or results occur. Where appropriate, the Data User is encouraged to consider collaboration or co-authorship with the authors. The Data User should realize that misinterpretation of data may occur if used out of context of the original study. While substantial efforts are made to ensure the accuracy of data and associated documentation, complete accuracy of data sets cannot be guaranteed. All data are made available "as is." The Data User should be aware, however, that data are updated periodically and it is the responsibility of the Data User to check for new versions of the data. The data authors and the repository where these data were obtained shall not be liable for damages resulting from any use or misinterpretation of the data. Thank you.</intellectualRights>
+    <distribution
+      id="10.6073/pasta/601ae427b99c240e6df52c0737efbab3" scope="system"
+          system="https://pasta.edirepository.org"><online><url
+            function="information">https://doi.org/10.6073/pasta/601ae427b99c240e6df52c0737efbab3</url></online></distribution><coverage>
+      <geographicCoverage>
+        <geographicDescription>Lee Stocking Island, Exumas, The Bahamas</geographicDescription>
+        <boundingCoordinates>
+          <westBoundingCoordinate>-76.2051</westBoundingCoordinate>
+          <eastBoundingCoordinate>-76.0328</eastBoundingCoordinate>
+          <northBoundingCoordinate>23.8448</northBoundingCoordinate>
+          <southBoundingCoordinate>23.6906</southBoundingCoordinate>
+        </boundingCoordinates>
+      </geographicCoverage>
+      <temporalCoverage>
+        <rangeOfDates>
+          <beginDate>
+            <calendarDate>1999-07-01</calendarDate>
+          </beginDate>
+          <endDate>
+            <calendarDate>2000-12-15</calendarDate>
+          </endDate>
+        </rangeOfDates>
+      </temporalCoverage>
+      <taxonomicCoverage>
+        <taxonomicClassification>
+          <taxonRankName>Superdomain</taxonRankName>
+          <taxonRankValue>Biota</taxonRankValue>
+          <taxonId
+              provider="http://www.marinespecies.org">1</taxonId>
+          <taxonomicClassification>
+            <taxonRankName>Kingdom</taxonRankName>
+            <taxonRankValue>Plantae</taxonRankValue>
+            <commonName>plants</commonName>
+            <taxonId
+                provider="http://www.marinespecies.org">3</taxonId>
+            <taxonomicClassification>
+              <taxonRankName>Subkingdom</taxonRankName>
+              <taxonRankValue>Viridiplantae</taxonRankValue>
+              <taxonId
+                  provider="http://www.marinespecies.org">368663</taxonId>
+              <taxonomicClassification>
+                <taxonRankName>Infrakingdom</taxonRankName>
+                <taxonRankValue>Streptophyta</taxonRankValue>
+                <taxonId
+                    provider="http://www.marinespecies.org">536191</taxonId>
+                <taxonomicClassification>
+                  <taxonRankName>Class</taxonRankName>
+                  <taxonRankValue>Magnoliopsida</taxonRankValue>
+                  <taxonId
+                      provider="http://www.marinespecies.org">182757</taxonId>
+                  <taxonomicClassification>
+                    <taxonRankName>Superorder</taxonRankName>
+                    <taxonRankValue>Lilianae</taxonRankValue>
+                    <taxonId
+                        provider="http://www.marinespecies.org">449895</taxonId>
+                    <taxonomicClassification>
+                      <taxonRankName>Order</taxonRankName>
+                      <taxonRankValue>Alismatales</taxonRankValue>
+                      <taxonId
+                          provider="http://www.marinespecies.org">153491</taxonId>
+                      <taxonomicClassification>
+                        <taxonRankName>Family</taxonRankName>
+                        <taxonRankValue>Hydrocharitaceae</taxonRankValue>
+                        <taxonId
+                            provider="http://www.marinespecies.org">143751</taxonId>
+                        <taxonomicClassification>
+                          <taxonRankName>Genus</taxonRankName>
+                          <taxonRankValue>Thalassia</taxonRankValue>
+                          <commonName>turtlegrass</commonName>
+                          <taxonId
+                              provider="http://www.marinespecies.org">206854</taxonId>
+                          <taxonomicClassification>
+                            <taxonRankName>Species</taxonRankName>
+                            <taxonRankValue>Thalassia testudinum</taxonRankValue>
+                            <commonName>turtle grass</commonName>
+                            <taxonId
+        provider="http://www.marinespecies.org">374720</taxonId>
+                          </taxonomicClassification>
+                        </taxonomicClassification>
+                      </taxonomicClassification>
+                    </taxonomicClassification>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+      </taxonomicCoverage>
+    </coverage>
+    <maintenance>
+      <description>Data collection for this project is complete, and updates are not currently planned for this data set. Please contact the corresponding author with any identified issues or questions.</description>
+      <maintenanceUpdateFrequency>notPlanned</maintenanceUpdateFrequency>
+    </maintenance>
+    <contact>
+      <individualName>
+        <salutation>Dr.</salutation>
+        <givenName>Robert</givenName>
+        <givenName>A</givenName>
+        <surName>Johnson</surName>
+      </individualName>
+      <organizationName>University of Wisconsin-Madison</organizationName>
+      <electronicMailAddress>robert.a.johnson@wisc.edu</electronicMailAddress>
+      <userId
+        directory="https://orcid.org">0000-0003-4072-5623</userId>
+    </contact>
+    <publisher><organizationName>Environmental Data Initiative</organizationName><electronicMailAddress>info@edirepository.org</electronicMailAddress><onlineUrl>https://edirepository.org</onlineUrl><userId
+          directory="https://ror.org">0330j0z60</userId></publisher><pubPlace>Environmental Data Initiative</pubPlace><methods>
+      <methodStep>
+        <description>Simulated Grazing - 
+
+Grazing was simulated in experimental plots (n = 20; 15 summer- and 5 winter-initiated plots) by clipping all seagrass blades within the plot area at the blade-sheath junction with scissors (Moran and Bjorndal 2005) resulting in shoot heights ~2 cm above the sediment surface. To mimic the natural grazing regime of green turtles in this region, blades were re-clipped each time mean blade length within a plot reached 5 cm (range of 12 – 37 days depending on growth conditions), and all clipped blades were collected and removed to simulate green turtle consumption and removal of seagrass biomass and nutrients (Bjorndal 1980; Ogden 1980). Rhizomes were severed around the edge of each clipped plot at the beginning of the experiment, and thereafter every 6 – 8 weeks, to prevent nutrient translocation into the plots as part of a separate experiment (Moran and Bjorndal 2007). To avoid possible edge effects from the surrounding ungrazed seagrass, all samples were collected from the inner 2 x 2 m area of plots leaving a 0.5 m wide buffer zone on all sides. This experimental regime was maintained for the 16-month duration of the experiment. 
+
+(text borrowed from the associated publication: Johnson et al. 2022. Limnology and Oceanography)</description>
+        <instrumentation>Scissors</instrumentation>
+      </methodStep>
+      <methodStep>
+        <description>Water Temperature and Salinity Measurements - 
+
+Environmental temperature (minimum and maximum values) and salinity were measured weekly. Temperatures were recorded from a minimum-maximum thermometer permanently deployed at seagrass canopy height at one location within each block of plots, and thermometers were re-set each week after reading. Salinity values were measured from a water sample collected near each thermometer at seagrass canopy height using a hand-held refractometer calibrated before each use.
+
+(text borrowed from the associated publication: Johnson et al. 2022. Limnology and Oceanography)</description>
+        <instrumentation>Min. - Max. Thermometer, Refractometer</instrumentation>
+      </methodStep>
+      <methodStep>
+        <description>Seagrass Physical Characteristic Measurements - 
+
+Seagrass structural characteristics (blade length, blade width, shoot density, number of blades per shoot) were measured in all plots prior to the initiation of clipping and every two weeks thereafter. Shoot density and number of blades per shoot were measured in situ from three randomly placed 25 x 25 cm quadrats (0.0625 m2) in each plot, and blade morphometry (length and width) was measured in situ from 30 randomly selected blades in each plot. Structural characteristics were then used to calculate one-sided leaf area index (often abbreviated as LAI) (Enríquez and Pantoja-Reyes 2005)—a measure of the available photosynthetic leaf area within one square meter of meadow. 
+
+(text borrowed from the associated publication: Johnson et al. 2022. Limnology and Oceanography)</description>
+        <instrumentation>Quadrats</instrumentation>
+      </methodStep>
+      <methodStep>
+        <description>Aboveground Seagrass Biomass Measurements - 
+
+Aboveground biomass was measured in all plots prior to the initiation of clipping by collecting all seagrass blades from within three randomly placed 25 x 25 cm quadrats (0.0625 m2). Biomass was measured in this same manner throughout the experiment in reference plots at two, six, eleven, and sixteen months. Following the initiation of clipping, biomass in clipped plots was measured using all blades collected from the inner 4 m2 area of each plot at each clipping event (when mean blade length reached 5 cm). For each plot, collected blades were cleaned of epiphytes and rinsed with seawater in the laboratory, and dry mass was measured after drying at 60 ℃ to constant weight.
+
+(text borrowed from the associated publication: Johnson et al. 2022. Limnology and Oceanography)</description>
+        <instrumentation>Quadrats, Drying Oven</instrumentation>
+      </methodStep>
+      <methodStep>
+        <description>Seagrass Linear Growth Rate Measurements - 
+
+Linear growth rates (i.e. vertical blade growth) were measured using different methods for clipped and reference treatments, so as to avoid repeated destructive sampling within reference plots (Moran and Bjorndal 2005). Since all blades in clipped plots were clipped at the blade-sheath junction at each clipping event, linear growth rates (mm d-1) were calculated from the measured blade length of 30 randomly selected blades from each plot at the time of clipping (since all tissue was new growth) divided by the number of days since the previous clipping event. Linear growth in reference plots was estimated using the leaf staple method (Zieman 1974) throughout the experiment at roughly two-week intervals. A staple was placed just above the blade-sheath junction in 30 randomly selected blades in each reference plot, and after roughly two weeks (mean 13 days) the new growth between the staple and the blade-sheath junction was measured and divided by the number of days since stapling.
+
+(text borrowed from the associated publication: Johnson et al. 2022. Limnology and Oceanography)</description>
+      </methodStep>
+      <methodStep>
+        <description>Seagrass Production Measurements - 
+
+Rates of mass growth (i.e., production) were measured using different methods for clipped and reference treatments. Production (g DM m-2 d-1) in clipped plots was measured at the time of each clipping event, and the dry mass of all blades collected from the inner 4 m2 of each plot (then standardized to 1 m2) was divided by the number of days since the previous clipping event. To avoid repeated destructive sampling in reference plots, rates of production were estimated from other measured metrics using the equation:
+
+((SD × BPS × AG × MPA)) / days
+
+where SD and BPS are shoot density and blades-per-shoot, respectively. AG is blade area growth (mm2 blade-1 d-1) and was calculated using the mean linear growth rate and blade width for each plot following each growth interval. MPA is mass per area of blade (g mm-2), which is a measure of the mass of one square millimeter of seagrass blade tissue, and can be used to estimate production when blade area growth (AG) is known. MPA was calculated for each clipped plot following clipping events using measured blade length, blade width, blades per shoot, shoot density, and aboveground biomass, and these values of MPA were used to estimate reference plot production assuming MPA to be equivalent for clipped and unclipped blades. 
+
+(text borrowed from the associated publication: Johnson et al. 2022. Limnology and Oceanography)</description>
+      </methodStep>
+    </methods>
+    <project>
+      <title>Effects of green turtle grazing on seagrass ecosystems</title>
+      <personnel>
+        <individualName>
+          <salutation>Dr. </salutation>
+          <givenName>Robert</givenName>
+          <givenName>A</givenName>
+          <surName>Johnson</surName>
+        </individualName>
+        <organizationName>University of Wisconsin-Madison</organizationName>
+        <electronicMailAddress>robert.a.johnson@wisc.edu</electronicMailAddress>
+        <userId
+      directory="https://orcid.org">0000-0003-4072-5623</userId>
+        <role>Lead Investigator</role>
+      </personnel>
+    </project>
+    <dataTable
+      id="a17f55a21b34590d9aa59a8bb4c653d7" scope="document"
+          system="https://pasta.edirepository.org">
+      <entityName>Seagrass aboveground biomass</entityName>
+      <entityDescription>Aboveground seagrass biomass data for the reference treatment, summer-initiated clipped treatment, and winter-initiated clipped treatment throughout the experiment.</entityDescription>
+      <physical>
+        <objectName>Seagrass-aboveground-biomass.csv</objectName>
+        <size
+          unit="byte">14474</size>
+        <authentication
+              method="MD5">ba58ad7d7265802a988ca9a11f508264</authentication>
+        <dataFormat>
+          <textFormat>
+            <numHeaderLines>1</numHeaderLines>
+            <recordDelimiter>\r\n</recordDelimiter>
+            <attributeOrientation>column</attributeOrientation>
+            <simpleDelimited>
+              <fieldDelimiter>,</fieldDelimiter>
+              <quoteCharacter>"</quoteCharacter>
+            </simpleDelimited>
+          </textFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url
+            function="download">https://pasta.lternet.edu/package/data/eml/edi/1206/1/a17f55a21b34590d9aa59a8bb4c653d7</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        <attribute>
+          <attributeName>plot</attributeName>
+          <attributeLabel>plot</attributeLabel>
+          <attributeDefinition>Individual plot identifier</attributeDefinition>
+          <storageType
+            typeSystem="XML Schema Datatypes">float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>number</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>integer</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>treatment</attributeName>
+          <attributeLabel>treatment</attributeLabel>
+          <attributeDefinition>The treatment to which the given plot belongs</attributeDefinition>
+          <storageType
+                  typeSystem="XML Schema Datatypes">string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain
+            enforced="yes">
+                  <codeDefinition>
+                    <code>reference</code>
+                    <definition>The unclipped reference treatment, in which measurements started in July 1999. </definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>summer</code>
+                    <definition>The summer-initiated clipped treatment, in which measurements started in July 1999.</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>winter</code>
+                    <definition>The winter-initiated clipped treatment, in which measurements started in February 2000.</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>date</attributeName>
+          <attributeLabel>date</attributeLabel>
+          <attributeDefinition>The date that the given sample or measurement was collected</attributeDefinition>
+          <storageType
+            typeSystem="XML Schema Datatypes">dateTime</storageType>
+          <measurementScale>
+            <dateTime>
+              <formatString>YYYY-MM-DD</formatString>
+              <dateTimeDomain/>
+            </dateTime>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>interval</attributeName>
+          <attributeLabel>interval</attributeLabel>
+          <attributeDefinition>The ordered number of the sampling event for the given measurement (i.e., the number of times the variable has been measured up to the current measurement)</attributeDefinition>
+          <storageType
+            typeSystem="XML Schema Datatypes">float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>number</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>integer</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>exp_week</attributeName>
+          <attributeLabel>exp_week</attributeLabel>
+          <attributeDefinition>Number of weeks since the start of the experiment (July 1, 1999)</attributeDefinition>
+          <storageType
+            typeSystem="XML Schema Datatypes">float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>number</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>integer</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>ag_biomass</attributeName>
+          <attributeLabel>ag_biomass</attributeLabel>
+          <attributeDefinition>Aboveground seagrass biomass, as dry mass</attributeDefinition>
+          <storageType
+      typeSystem="XML Schema Datatypes">float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>gramPerMeterSquared</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+      </attributeList>
+      <caseSensitive>no</caseSensitive>
+      <numberOfRecords>406</numberOfRecords>
+    </dataTable>
+    <dataTable
+      id="cc7aa1d4857450ce8b22d54d037eb4bc" scope="document"
+          system="https://pasta.edirepository.org">
+      <entityName>Seagrass linear growth rates</entityName>
+      <entityDescription>Rates of linear seagrass blade growth from the reference treatment, summer-initiated clipped treatment, and winter-initiated clipped treatment during the experiment.</entityDescription>
+      <physical>
+        <objectName>Seagrass-linear-growth-rates.csv</objectName>
+        <size
+          unit="byte">28533</size>
+        <authentication
+              method="MD5">7e9c084a0692625e6985da04cceb78e5</authentication>
+        <dataFormat>
+          <textFormat>
+            <numHeaderLines>1</numHeaderLines>
+            <recordDelimiter>\r\n</recordDelimiter>
+            <attributeOrientation>column</attributeOrientation>
+            <simpleDelimited>
+              <fieldDelimiter>,</fieldDelimiter>
+              <quoteCharacter>"</quoteCharacter>
+            </simpleDelimited>
+          </textFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url
+            function="download">https://pasta.lternet.edu/package/data/eml/edi/1206/1/cc7aa1d4857450ce8b22d54d037eb4bc</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        <attribute>
+          <attributeName>plot</attributeName>
+          <attributeLabel>plot</attributeLabel>
+          <attributeDefinition>Individual plot identifier</attributeDefinition>
+          <storageType
+            typeSystem="XML Schema Datatypes">float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>number</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>integer</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>treatment</attributeName>
+          <attributeLabel>treatment</attributeLabel>
+          <attributeDefinition>The treatment to which the given plot belongs</attributeDefinition>
+          <storageType
+                  typeSystem="XML Schema Datatypes">string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain
+            enforced="yes">
+                  <codeDefinition>
+                    <code>reference</code>
+                    <definition>The unclipped reference treatment, in which measurements started in July 1999. </definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>summer</code>
+                    <definition>The summer-initiated clipped treatment, in which measurements started in July 1999.</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>winter</code>
+                    <definition>The winter-initiated clipped treatment, in which measurements started in February 2000.</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>date</attributeName>
+          <attributeLabel>date</attributeLabel>
+          <attributeDefinition>The date that the given sample or measurement was collected</attributeDefinition>
+          <storageType
+            typeSystem="XML Schema Datatypes">dateTime</storageType>
+          <measurementScale>
+            <dateTime>
+              <formatString>YYYY-MM-DD</formatString>
+              <dateTimeDomain/>
+            </dateTime>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>interval</attributeName>
+          <attributeLabel>interval</attributeLabel>
+          <attributeDefinition>The ordered number of the sampling event for the given measurement (i.e., the number of times the variable has been measured up to the current measurement)</attributeDefinition>
+          <storageType
+            typeSystem="XML Schema Datatypes">float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>number</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>integer</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>exp_week</attributeName>
+          <attributeLabel>exp_week</attributeLabel>
+          <attributeDefinition>Number of weeks since the start of the experiment (July 1, 1999)</attributeDefinition>
+          <storageType
+            typeSystem="XML Schema Datatypes">float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>number</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>integer</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>gr_length</attributeName>
+          <attributeLabel>gr_length</attributeLabel>
+          <attributeDefinition>Seagrass linear growth rate (i.e., vertical blade growth)</attributeDefinition>
+          <storageType
+      typeSystem="XML Schema Datatypes">float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>millimeterPerDay</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+      </attributeList>
+      <caseSensitive>no</caseSensitive>
+      <numberOfRecords>792</numberOfRecords>
+    </dataTable>
+    <dataTable
+      id="53cd073fddb2350c7c30377fa06e9691" scope="document"
+          system="https://pasta.edirepository.org">
+      <entityName>Seagrass production rates</entityName>
+      <entityDescription>Rates of seagrass production (i.e., mass growth) from the reference treatment, summer-initiated clipped treatment, and winter-initiated clipped treatment during the experiment.</entityDescription>
+      <physical>
+        <objectName>Seagrass-production-rates.csv</objectName>
+        <size
+          unit="byte">28837</size>
+        <authentication
+              method="MD5">41f4ae9a2027810e1a23992747b07481</authentication>
+        <dataFormat>
+          <textFormat>
+            <numHeaderLines>1</numHeaderLines>
+            <recordDelimiter>\r\n</recordDelimiter>
+            <attributeOrientation>column</attributeOrientation>
+            <simpleDelimited>
+              <fieldDelimiter>,</fieldDelimiter>
+              <quoteCharacter>"</quoteCharacter>
+            </simpleDelimited>
+          </textFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url
+            function="download">https://pasta.lternet.edu/package/data/eml/edi/1206/1/53cd073fddb2350c7c30377fa06e9691</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        <attribute>
+          <attributeName>plot</attributeName>
+          <attributeLabel>plot</attributeLabel>
+          <attributeDefinition>Individual plot identifier</attributeDefinition>
+          <storageType
+            typeSystem="XML Schema Datatypes">float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>number</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>integer</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>treatment</attributeName>
+          <attributeLabel>treatment</attributeLabel>
+          <attributeDefinition>The treatment to which the given plot belongs</attributeDefinition>
+          <storageType
+                  typeSystem="XML Schema Datatypes">string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain
+            enforced="yes">
+                  <codeDefinition>
+                    <code>reference</code>
+                    <definition>The unclipped reference treatment, in which measurements started in July 1999. </definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>summer</code>
+                    <definition>The summer-initiated clipped treatment, in which measurements started in July 1999.</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>winter</code>
+                    <definition>The winter-initiated clipped treatment, in which measurements started in February 2000.</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>date</attributeName>
+          <attributeLabel>date</attributeLabel>
+          <attributeDefinition>The date that the given sample or measurement was collected</attributeDefinition>
+          <storageType
+            typeSystem="XML Schema Datatypes">dateTime</storageType>
+          <measurementScale>
+            <dateTime>
+              <formatString>YYYY-MM-DD</formatString>
+              <dateTimeDomain/>
+            </dateTime>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>interval</attributeName>
+          <attributeLabel>interval</attributeLabel>
+          <attributeDefinition>The ordered number of the sampling event for the given measurement (i.e., the number of times the variable has been measured up to the current measurement)</attributeDefinition>
+          <storageType
+            typeSystem="XML Schema Datatypes">float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>number</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>integer</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>exp_week</attributeName>
+          <attributeLabel>exp_week</attributeLabel>
+          <attributeDefinition>Number of weeks since the start of the experiment (July 1, 1999)</attributeDefinition>
+          <storageType
+            typeSystem="XML Schema Datatypes">float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>number</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>integer</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>gr_mass</attributeName>
+          <attributeLabel>gr_mass</attributeLabel>
+          <attributeDefinition>Rate of seagrass mass growth (i.e., production), as dry mass</attributeDefinition>
+          <storageType
+      typeSystem="XML Schema Datatypes">float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>gramPerMeterSquaredPerDay</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+      </attributeList>
+      <caseSensitive>no</caseSensitive>
+      <numberOfRecords>792</numberOfRecords>
+    </dataTable>
+    <dataTable
+      id="4185a9c02f6d65b151b71f6286a8a8af" scope="document"
+          system="https://pasta.edirepository.org">
+      <entityName>Seagrass structure</entityName>
+      <entityDescription>Measures of seagrass blade length, blade width, shoot density, number of blades per shoot, and leaf area index from the reference treatment, summer-initiated clipped treatment, and winter-initiated clipped treatment during the experiment.</entityDescription>
+      <physical>
+        <objectName>Seagrass-structure.csv</objectName>
+        <size
+          unit="byte">61709</size>
+        <authentication
+              method="MD5">b91c432c0536f662a914956ef5b9e4b4</authentication>
+        <dataFormat>
+          <textFormat>
+            <numHeaderLines>1</numHeaderLines>
+            <recordDelimiter>\r\n</recordDelimiter>
+            <attributeOrientation>column</attributeOrientation>
+            <simpleDelimited>
+              <fieldDelimiter>,</fieldDelimiter>
+              <quoteCharacter>"</quoteCharacter>
+            </simpleDelimited>
+          </textFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url
+            function="download">https://pasta.lternet.edu/package/data/eml/edi/1206/1/4185a9c02f6d65b151b71f6286a8a8af</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        <attribute>
+          <attributeName>plot</attributeName>
+          <attributeLabel>plot</attributeLabel>
+          <attributeDefinition>Individual plot identifier</attributeDefinition>
+          <storageType
+            typeSystem="XML Schema Datatypes">float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>number</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>integer</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>treatment</attributeName>
+          <attributeLabel>treatment</attributeLabel>
+          <attributeDefinition>The treatment to which the given plot belongs</attributeDefinition>
+          <storageType
+                  typeSystem="XML Schema Datatypes">string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain
+            enforced="yes">
+                  <codeDefinition>
+                    <code>reference</code>
+                    <definition>The unclipped reference treatment, in which measurements started in July 1999. </definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>summer</code>
+                    <definition>The summer-initiated clipped treatment, in which measurements started in July 1999.</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>winter</code>
+                    <definition>The winter-initiated clipped treatment, in which measurements started in February 2000.</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>date</attributeName>
+          <attributeLabel>date</attributeLabel>
+          <attributeDefinition>The date that the given sample or measurement was collected</attributeDefinition>
+          <storageType
+            typeSystem="XML Schema Datatypes">dateTime</storageType>
+          <measurementScale>
+            <dateTime>
+              <formatString>YYYY-MM-DD</formatString>
+              <dateTimeDomain/>
+            </dateTime>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>interval</attributeName>
+          <attributeLabel>interval</attributeLabel>
+          <attributeDefinition>The ordered number of the sampling event for the given measurement (i.e., the number of times the variable has been measured up to the current measurement)</attributeDefinition>
+          <storageType
+            typeSystem="XML Schema Datatypes">float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>number</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>integer</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>exp_week</attributeName>
+          <attributeLabel>exp_week</attributeLabel>
+          <attributeDefinition>Number of weeks since the start of the experiment (July 1, 1999)</attributeDefinition>
+          <storageType
+            typeSystem="XML Schema Datatypes">float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>number</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>integer</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>blade_length</attributeName>
+          <attributeLabel>blade_length</attributeLabel>
+          <attributeDefinition>Seagrass blade length</attributeDefinition>
+          <storageType
+            typeSystem="XML Schema Datatypes">float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>centimeter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>blade_width</attributeName>
+          <attributeLabel>blade_width</attributeLabel>
+          <attributeDefinition>Seagrass blade width</attributeDefinition>
+          <storageType
+            typeSystem="XML Schema Datatypes">float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>centimeter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>shoot_density</attributeName>
+          <attributeLabel>shoot_density</attributeLabel>
+          <attributeDefinition>Seagrass shoot density</attributeDefinition>
+          <storageType
+            typeSystem="XML Schema Datatypes">float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>numberPerMeterSquared</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>bps</attributeName>
+          <attributeLabel>bps</attributeLabel>
+          <attributeDefinition>Number of seagrass blades per shoot</attributeDefinition>
+          <storageType
+            typeSystem="XML Schema Datatypes">float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>number</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>lai</attributeName>
+          <attributeLabel>lai</attributeLabel>
+          <attributeDefinition>Leaf area index</attributeDefinition>
+          <storageType
+      typeSystem="XML Schema Datatypes">float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <customUnit>meterSquaredPerMeterSquared</customUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+      </attributeList>
+      <caseSensitive>no</caseSensitive>
+      <numberOfRecords>1024</numberOfRecords>
+    </dataTable>
+    <dataTable
+      id="6f60da82429f4b24a92425ba0d164f9f" scope="document"
+          system="https://pasta.edirepository.org">
+      <entityName>Temperature and Salinity</entityName>
+      <entityDescription>Weekly measures of minimum water temperature, maximum water temperature, and salinity.</entityDescription>
+      <physical>
+        <objectName>Temperature-Salinity.csv</objectName>
+        <size
+          unit="byte">6613</size>
+        <authentication
+              method="MD5">0425b55cae4927ccc0a1df37e9a19c2a</authentication>
+        <dataFormat>
+          <textFormat>
+            <numHeaderLines>1</numHeaderLines>
+            <recordDelimiter>\n</recordDelimiter>
+            <attributeOrientation>column</attributeOrientation>
+            <simpleDelimited>
+              <fieldDelimiter>,</fieldDelimiter>
+              <quoteCharacter>"</quoteCharacter>
+            </simpleDelimited>
+          </textFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url
+            function="download">https://pasta.lternet.edu/package/data/eml/edi/1206/1/6f60da82429f4b24a92425ba0d164f9f</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        <attribute>
+          <attributeName>treatment</attributeName>
+          <attributeLabel>treatment</attributeLabel>
+          <attributeDefinition>The treatment to which the given plot belongs</attributeDefinition>
+          <storageType
+                  typeSystem="XML Schema Datatypes">string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain
+            enforced="yes">
+                  <codeDefinition>
+                    <code>reference</code>
+                    <definition>The unclipped reference treatment, in which measurements started in July 1999. </definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>summer</code>
+                    <definition>The summer-initiated clipped treatment, in which measurements started in July 1999.</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>winter</code>
+                    <definition>The winter-initiated clipped treatment, in which measurements started in February 2000.</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>date</attributeName>
+          <attributeLabel>date</attributeLabel>
+          <attributeDefinition>The date that the given sample or measurement was collected</attributeDefinition>
+          <storageType
+            typeSystem="XML Schema Datatypes">dateTime</storageType>
+          <measurementScale>
+            <dateTime>
+              <formatString>YYYY-MM-DD</formatString>
+              <dateTimeDomain/>
+            </dateTime>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>exp_week</attributeName>
+          <attributeLabel>exp_week</attributeLabel>
+          <attributeDefinition>Number of weeks since the start of the experiment (July 1, 1999)</attributeDefinition>
+          <storageType
+            typeSystem="XML Schema Datatypes">float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>number</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>integer</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>min_temp</attributeName>
+          <attributeLabel>min_temp</attributeLabel>
+          <attributeDefinition>Minimum water temperature measured during the preceding week</attributeDefinition>
+          <storageType
+            typeSystem="XML Schema Datatypes">float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>max_temp</attributeName>
+          <attributeLabel>max_temp</attributeLabel>
+          <attributeDefinition>Maximum water temperature measured during the preceding week</attributeDefinition>
+          <storageType
+            typeSystem="XML Schema Datatypes">float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>salinity</attributeName>
+          <attributeLabel>salinity</attributeLabel>
+          <attributeDefinition>Water column salinity measured at seagrass canopy height</attributeDefinition>
+          <storageType
+          typeSystem="XML Schema Datatypes">float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <customUnit>practicalSalinityUnit</customUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>missing measurement</codeExplanation>
+          </missingValueCode>
+        </attribute>
+      </attributeList>
+      <caseSensitive>no</caseSensitive>
+      <numberOfRecords>180</numberOfRecords>
+    </dataTable>
+  </dataset>
+  <additionalMetadata>
+    <metadata>
+      <unitList>
+        <unit
+          id="meterSquaredPerMeterSquared"
+          name="meterSquaredPerMeterSquared">
+          <description>A measure of the available leaf surface area (units of square meters) within one square meter of substrate. In effect, this makes Leaf Area Index unitless.</description>
+        </unit>
+        <unit
+          id="practicalSalinityUnit"
+        name="practicalSalinityUnit">
+          <description>Practical salinity units are equivalent to units of both permil and parts per thousand (ppt). </description>
+        </unit>
+      </unitList>
+    </metadata>
+  </additionalMetadata>
+  <additionalMetadata>
+    <metadata>
+      <emlEditor
+        app="ezEML" release="2022.08.24"/>
+    </metadata>
+  </additionalMetadata>
+</eml:eml>

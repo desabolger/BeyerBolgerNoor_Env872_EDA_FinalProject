@@ -1,0 +1,940 @@
+
+  
+    uid=EDI,o=EDI,dc=edirepository,dc=orgall
+      https://orcid.org/0000-0003-4072-5623
+      all
+    
+    
+      public
+      read
+    
+  
+  
+    doi:10.6073/pasta/601ae427b99c240e6df52c0737efbab3Seagrass growth rates and physical characteristics and measures of water temperature and salinity during a simulated green turtle grazing experiment in The Bahamas, 1999 – 2000.
+    
+      Dr.  Robert Johnson
+      University of Wisconsin-Madison
+      robert.a.johnson@wisc.edu
+      0000-0003-4072-5623
+    
+    
+      Dr.  Kathleen Hanes
+      Washington University in St. Louis
+      khanes@wustl.edu
+    
+    
+      Dr. Alan Bolten
+      University of Florida
+      abolten@ufl.edu
+      0000-0002-4834-2742
+    
+    
+      Dr. Karen Bjorndal
+      University of Florida
+      bjorndal@ufl.edu
+      0000-0002-6286-1901
+    
+    2022-09-01This data set contains data from an experiment in which green turtle grazing was simulated in a Thalassia testudinum seagrass meadow in The Bahamas from July 1999 until December 2000. Measurements of water temperature and salinity were collected weekly. Seagrass meadow physical characteristics--blade length, blade width, number of blades per shoot, shoot density, and leaf area index--along with growth rates (both linear growth and production) were measured at various temporal intervals. Measurements were made in each of three treatments: 1) an unclipped reference treatment (representing ungrazed seagrass) in which measurements began in July 1999, 2) an experimentally clipped treatment (representing grazing) in which measurements began in July 1999, and 3) an experimentally clipped treatment (representing grazing) in which measurements began in February 2000. Data were used to investigate relationships between water temperature and salinity on seagrass growth and physical characteristics and how these relationships are affected by green turtle grazing.
+    
+      seagrass
+      grazing
+      plant growth
+      aboveground production
+      leaf area index
+      water temperature
+      salinity
+      LTER Controlled Vocabulary
+    
+    
+      The Bahamas
+    
+    This information is released under the Creative Commons license - Attribution - CC BY (https://creativecommons.org/licenses/by/4.0/). The consumer of these data ("Data User" herein) is required to cite it appropriately in any publication that results from its use. The Data User should realize that these data may be actively used by others for ongoing research and that coordination may be necessary to prevent duplicate publication. The Data User is urged to contact the authors of these data if any questions about methodology or results occur. Where appropriate, the Data User is encouraged to consider collaboration or co-authorship with the authors. The Data User should realize that misinterpretation of data may occur if used out of context of the original study. While substantial efforts are made to ensure the accuracy of data and associated documentation, complete accuracy of data sets cannot be guaranteed. All data are made available "as is." The Data User should be aware, however, that data are updated periodically and it is the responsibility of the Data User to check for new versions of the data. The data authors and the repository where these data were obtained shall not be liable for damages resulting from any use or misinterpretation of the data. Thank you.
+    https://doi.org/10.6073/pasta/601ae427b99c240e6df52c0737efbab3
+      
+        Lee Stocking Island, Exumas, The Bahamas
+        
+          -76.2051
+          -76.0328
+          23.8448
+          23.6906
+        
+      
+      
+        
+          
+            1999-07-01
+          
+          
+            2000-12-15
+          
+        
+      
+      
+        
+          Superdomain
+          Biota
+          1
+          
+            Kingdom
+            Plantae
+            plants
+            3
+            
+              Subkingdom
+              Viridiplantae
+              368663
+              
+                Infrakingdom
+                Streptophyta
+                536191
+                
+                  Class
+                  Magnoliopsida
+                  182757
+                  
+                    Superorder
+                    Lilianae
+                    449895
+                    
+                      Order
+                      Alismatales
+                      153491
+                      
+                        Family
+                        Hydrocharitaceae
+                        143751
+                        
+                          Genus
+                          Thalassia
+                          turtlegrass
+                          206854
+                          
+                            Species
+                            Thalassia testudinum
+                            turtle grass
+                            374720
+                          
+                        
+                      
+                    
+                  
+                
+              
+            
+          
+        
+      
+    
+    
+      Data collection for this project is complete, and updates are not currently planned for this data set. Please contact the corresponding author with any identified issues or questions.
+      notPlanned
+    
+    
+      Dr. Robert Johnson
+      University of Wisconsin-Madison
+      robert.a.johnson@wisc.edu
+      0000-0003-4072-5623
+    
+    Environmental Data Initiativeinfo@edirepository.orghttps://edirepository.org0330j0z60Environmental Data Initiative
+      
+        Simulated Grazing - 
+
+Grazing was simulated in experimental plots (n = 20; 15 summer- and 5 winter-initiated plots) by clipping all seagrass blades within the plot area at the blade-sheath junction with scissors (Moran and Bjorndal 2005) resulting in shoot heights ~2 cm above the sediment surface. To mimic the natural grazing regime of green turtles in this region, blades were re-clipped each time mean blade length within a plot reached 5 cm (range of 12 – 37 days depending on growth conditions), and all clipped blades were collected and removed to simulate green turtle consumption and removal of seagrass biomass and nutrients (Bjorndal 1980; Ogden 1980). Rhizomes were severed around the edge of each clipped plot at the beginning of the experiment, and thereafter every 6 – 8 weeks, to prevent nutrient translocation into the plots as part of a separate experiment (Moran and Bjorndal 2007). To avoid possible edge effects from the surrounding ungrazed seagrass, all samples were collected from the inner 2 x 2 m area of plots leaving a 0.5 m wide buffer zone on all sides. This experimental regime was maintained for the 16-month duration of the experiment. 
+
+(text borrowed from the associated publication: Johnson et al. 2022. Limnology and Oceanography)
+        Scissors
+      
+      
+        Water Temperature and Salinity Measurements - 
+
+Environmental temperature (minimum and maximum values) and salinity were measured weekly. Temperatures were recorded from a minimum-maximum thermometer permanently deployed at seagrass canopy height at one location within each block of plots, and thermometers were re-set each week after reading. Salinity values were measured from a water sample collected near each thermometer at seagrass canopy height using a hand-held refractometer calibrated before each use.
+
+(text borrowed from the associated publication: Johnson et al. 2022. Limnology and Oceanography)
+        Min. - Max. Thermometer, Refractometer
+      
+      
+        Seagrass Physical Characteristic Measurements - 
+
+Seagrass structural characteristics (blade length, blade width, shoot density, number of blades per shoot) were measured in all plots prior to the initiation of clipping and every two weeks thereafter. Shoot density and number of blades per shoot were measured in situ from three randomly placed 25 x 25 cm quadrats (0.0625 m2) in each plot, and blade morphometry (length and width) was measured in situ from 30 randomly selected blades in each plot. Structural characteristics were then used to calculate one-sided leaf area index (often abbreviated as LAI) (Enríquez and Pantoja-Reyes 2005)—a measure of the available photosynthetic leaf area within one square meter of meadow. 
+
+(text borrowed from the associated publication: Johnson et al. 2022. Limnology and Oceanography)
+        Quadrats
+      
+      
+        Aboveground Seagrass Biomass Measurements - 
+
+Aboveground biomass was measured in all plots prior to the initiation of clipping by collecting all seagrass blades from within three randomly placed 25 x 25 cm quadrats (0.0625 m2). Biomass was measured in this same manner throughout the experiment in reference plots at two, six, eleven, and sixteen months. Following the initiation of clipping, biomass in clipped plots was measured using all blades collected from the inner 4 m2 area of each plot at each clipping event (when mean blade length reached 5 cm). For each plot, collected blades were cleaned of epiphytes and rinsed with seawater in the laboratory, and dry mass was measured after drying at 60 ℃ to constant weight.
+
+(text borrowed from the associated publication: Johnson et al. 2022. Limnology and Oceanography)
+        Quadrats, Drying Oven
+      
+      
+        Seagrass Linear Growth Rate Measurements - 
+
+Linear growth rates (i.e. vertical blade growth) were measured using different methods for clipped and reference treatments, so as to avoid repeated destructive sampling within reference plots (Moran and Bjorndal 2005). Since all blades in clipped plots were clipped at the blade-sheath junction at each clipping event, linear growth rates (mm d-1) were calculated from the measured blade length of 30 randomly selected blades from each plot at the time of clipping (since all tissue was new growth) divided by the number of days since the previous clipping event. Linear growth in reference plots was estimated using the leaf staple method (Zieman 1974) throughout the experiment at roughly two-week intervals. A staple was placed just above the blade-sheath junction in 30 randomly selected blades in each reference plot, and after roughly two weeks (mean 13 days) the new growth between the staple and the blade-sheath junction was measured and divided by the number of days since stapling.
+
+(text borrowed from the associated publication: Johnson et al. 2022. Limnology and Oceanography)
+      
+      
+        Seagrass Production Measurements - 
+
+Rates of mass growth (i.e., production) were measured using different methods for clipped and reference treatments. Production (g DM m-2 d-1) in clipped plots was measured at the time of each clipping event, and the dry mass of all blades collected from the inner 4 m2 of each plot (then standardized to 1 m2) was divided by the number of days since the previous clipping event. To avoid repeated destructive sampling in reference plots, rates of production were estimated from other measured metrics using the equation:
+
+((SD × BPS × AG × MPA)) / days
+
+where SD and BPS are shoot density and blades-per-shoot, respectively. AG is blade area growth (mm2 blade-1 d-1) and was calculated using the mean linear growth rate and blade width for each plot following each growth interval. MPA is mass per area of blade (g mm-2), which is a measure of the mass of one square millimeter of seagrass blade tissue, and can be used to estimate production when blade area growth (AG) is known. MPA was calculated for each clipped plot following clipping events using measured blade length, blade width, blades per shoot, shoot density, and aboveground biomass, and these values of MPA were used to estimate reference plot production assuming MPA to be equivalent for clipped and unclipped blades. 
+
+(text borrowed from the associated publication: Johnson et al. 2022. Limnology and Oceanography)
+      
+    
+    
+      Effects of green turtle grazing on seagrass ecosystems
+      
+        Dr.  Robert Johnson
+        University of Wisconsin-Madison
+        robert.a.johnson@wisc.edu
+        0000-0003-4072-5623
+        Lead Investigator
+      
+    
+    
+      Seagrass aboveground biomass
+      Aboveground seagrass biomass data for the reference treatment, summer-initiated clipped treatment, and winter-initiated clipped treatment throughout the experiment.
+      
+        Seagrass-aboveground-biomass.csv
+        14474
+        ba58ad7d7265802a988ca9a11f508264
+        
+          
+            1
+            \r\n
+            column
+            
+              ,
+              "
+            
+          
+        
+        
+          
+            https://pasta.lternet.edu/package/data/eml/edi/1206/1/a17f55a21b34590d9aa59a8bb4c653d7
+          
+        
+      
+      
+        
+          plot
+          plot
+          Individual plot identifier
+          float
+          
+            
+              
+                number
+              
+              
+                integer
+              
+            
+          
+        
+        
+          treatment
+          treatment
+          The treatment to which the given plot belongs
+          string
+          
+            
+              
+                
+                  
+                    reference
+                    The unclipped reference treatment, in which measurements started in July 1999. 
+                  
+                  
+                    summer
+                    The summer-initiated clipped treatment, in which measurements started in July 1999.
+                  
+                  
+                    winter
+                    The winter-initiated clipped treatment, in which measurements started in February 2000.
+                  
+                
+              
+            
+          
+        
+        
+          date
+          date
+          The date that the given sample or measurement was collected
+          dateTime
+          
+            
+              YYYY-MM-DD
+              
+            
+          
+        
+        
+          interval
+          interval
+          The ordered number of the sampling event for the given measurement (i.e., the number of times the variable has been measured up to the current measurement)
+          float
+          
+            
+              
+                number
+              
+              
+                integer
+              
+            
+          
+        
+        
+          exp_week
+          exp_week
+          Number of weeks since the start of the experiment (July 1, 1999)
+          float
+          
+            
+              
+                number
+              
+              
+                integer
+              
+            
+          
+        
+        
+          ag_biomass
+          ag_biomass
+          Aboveground seagrass biomass, as dry mass
+          float
+          
+            
+              
+                gramPerMeterSquared
+              
+              
+                real
+              
+            
+          
+        
+      
+      no
+      406
+    
+    
+      Seagrass linear growth rates
+      Rates of linear seagrass blade growth from the reference treatment, summer-initiated clipped treatment, and winter-initiated clipped treatment during the experiment.
+      
+        Seagrass-linear-growth-rates.csv
+        28533
+        7e9c084a0692625e6985da04cceb78e5
+        
+          
+            1
+            \r\n
+            column
+            
+              ,
+              "
+            
+          
+        
+        
+          
+            https://pasta.lternet.edu/package/data/eml/edi/1206/1/cc7aa1d4857450ce8b22d54d037eb4bc
+          
+        
+      
+      
+        
+          plot
+          plot
+          Individual plot identifier
+          float
+          
+            
+              
+                number
+              
+              
+                integer
+              
+            
+          
+        
+        
+          treatment
+          treatment
+          The treatment to which the given plot belongs
+          string
+          
+            
+              
+                
+                  
+                    reference
+                    The unclipped reference treatment, in which measurements started in July 1999. 
+                  
+                  
+                    summer
+                    The summer-initiated clipped treatment, in which measurements started in July 1999.
+                  
+                  
+                    winter
+                    The winter-initiated clipped treatment, in which measurements started in February 2000.
+                  
+                
+              
+            
+          
+        
+        
+          date
+          date
+          The date that the given sample or measurement was collected
+          dateTime
+          
+            
+              YYYY-MM-DD
+              
+            
+          
+        
+        
+          interval
+          interval
+          The ordered number of the sampling event for the given measurement (i.e., the number of times the variable has been measured up to the current measurement)
+          float
+          
+            
+              
+                number
+              
+              
+                integer
+              
+            
+          
+        
+        
+          exp_week
+          exp_week
+          Number of weeks since the start of the experiment (July 1, 1999)
+          float
+          
+            
+              
+                number
+              
+              
+                integer
+              
+            
+          
+        
+        
+          gr_length
+          gr_length
+          Seagrass linear growth rate (i.e., vertical blade growth)
+          float
+          
+            
+              
+                millimeterPerDay
+              
+              
+                real
+              
+            
+          
+        
+      
+      no
+      792
+    
+    
+      Seagrass production rates
+      Rates of seagrass production (i.e., mass growth) from the reference treatment, summer-initiated clipped treatment, and winter-initiated clipped treatment during the experiment.
+      
+        Seagrass-production-rates.csv
+        28837
+        41f4ae9a2027810e1a23992747b07481
+        
+          
+            1
+            \r\n
+            column
+            
+              ,
+              "
+            
+          
+        
+        
+          
+            https://pasta.lternet.edu/package/data/eml/edi/1206/1/53cd073fddb2350c7c30377fa06e9691
+          
+        
+      
+      
+        
+          plot
+          plot
+          Individual plot identifier
+          float
+          
+            
+              
+                number
+              
+              
+                integer
+              
+            
+          
+        
+        
+          treatment
+          treatment
+          The treatment to which the given plot belongs
+          string
+          
+            
+              
+                
+                  
+                    reference
+                    The unclipped reference treatment, in which measurements started in July 1999. 
+                  
+                  
+                    summer
+                    The summer-initiated clipped treatment, in which measurements started in July 1999.
+                  
+                  
+                    winter
+                    The winter-initiated clipped treatment, in which measurements started in February 2000.
+                  
+                
+              
+            
+          
+        
+        
+          date
+          date
+          The date that the given sample or measurement was collected
+          dateTime
+          
+            
+              YYYY-MM-DD
+              
+            
+          
+        
+        
+          interval
+          interval
+          The ordered number of the sampling event for the given measurement (i.e., the number of times the variable has been measured up to the current measurement)
+          float
+          
+            
+              
+                number
+              
+              
+                integer
+              
+            
+          
+        
+        
+          exp_week
+          exp_week
+          Number of weeks since the start of the experiment (July 1, 1999)
+          float
+          
+            
+              
+                number
+              
+              
+                integer
+              
+            
+          
+        
+        
+          gr_mass
+          gr_mass
+          Rate of seagrass mass growth (i.e., production), as dry mass
+          float
+          
+            
+              
+                gramPerMeterSquaredPerDay
+              
+              
+                real
+              
+            
+          
+        
+      
+      no
+      792
+    
+    
+      Seagrass structure
+      Measures of seagrass blade length, blade width, shoot density, number of blades per shoot, and leaf area index from the reference treatment, summer-initiated clipped treatment, and winter-initiated clipped treatment during the experiment.
+      
+        Seagrass-structure.csv
+        61709
+        b91c432c0536f662a914956ef5b9e4b4
+        
+          
+            1
+            \r\n
+            column
+            
+              ,
+              "
+            
+          
+        
+        
+          
+            https://pasta.lternet.edu/package/data/eml/edi/1206/1/4185a9c02f6d65b151b71f6286a8a8af
+          
+        
+      
+      
+        
+          plot
+          plot
+          Individual plot identifier
+          float
+          
+            
+              
+                number
+              
+              
+                integer
+              
+            
+          
+        
+        
+          treatment
+          treatment
+          The treatment to which the given plot belongs
+          string
+          
+            
+              
+                
+                  
+                    reference
+                    The unclipped reference treatment, in which measurements started in July 1999. 
+                  
+                  
+                    summer
+                    The summer-initiated clipped treatment, in which measurements started in July 1999.
+                  
+                  
+                    winter
+                    The winter-initiated clipped treatment, in which measurements started in February 2000.
+                  
+                
+              
+            
+          
+        
+        
+          date
+          date
+          The date that the given sample or measurement was collected
+          dateTime
+          
+            
+              YYYY-MM-DD
+              
+            
+          
+        
+        
+          interval
+          interval
+          The ordered number of the sampling event for the given measurement (i.e., the number of times the variable has been measured up to the current measurement)
+          float
+          
+            
+              
+                number
+              
+              
+                integer
+              
+            
+          
+        
+        
+          exp_week
+          exp_week
+          Number of weeks since the start of the experiment (July 1, 1999)
+          float
+          
+            
+              
+                number
+              
+              
+                integer
+              
+            
+          
+        
+        
+          blade_length
+          blade_length
+          Seagrass blade length
+          float
+          
+            
+              
+                centimeter
+              
+              
+                real
+              
+            
+          
+        
+        
+          blade_width
+          blade_width
+          Seagrass blade width
+          float
+          
+            
+              
+                centimeter
+              
+              
+                real
+              
+            
+          
+        
+        
+          shoot_density
+          shoot_density
+          Seagrass shoot density
+          float
+          
+            
+              
+                numberPerMeterSquared
+              
+              
+                real
+              
+            
+          
+        
+        
+          bps
+          bps
+          Number of seagrass blades per shoot
+          float
+          
+            
+              
+                number
+              
+              
+                real
+              
+            
+          
+        
+        
+          lai
+          lai
+          Leaf area index
+          float
+          
+            
+              
+                meterSquaredPerMeterSquared
+              
+              
+                real
+              
+            
+          
+        
+      
+      no
+      1024
+    
+    
+      Temperature and Salinity
+      Weekly measures of minimum water temperature, maximum water temperature, and salinity.
+      
+        Temperature-Salinity.csv
+        6613
+        0425b55cae4927ccc0a1df37e9a19c2a
+        
+          
+            1
+            \n
+            column
+            
+              ,
+              "
+            
+          
+        
+        
+          
+            https://pasta.lternet.edu/package/data/eml/edi/1206/1/6f60da82429f4b24a92425ba0d164f9f
+          
+        
+      
+      
+        
+          treatment
+          treatment
+          The treatment to which the given plot belongs
+          string
+          
+            
+              
+                
+                  
+                    reference
+                    The unclipped reference treatment, in which measurements started in July 1999. 
+                  
+                  
+                    summer
+                    The summer-initiated clipped treatment, in which measurements started in July 1999.
+                  
+                  
+                    winter
+                    The winter-initiated clipped treatment, in which measurements started in February 2000.
+                  
+                
+              
+            
+          
+        
+        
+          date
+          date
+          The date that the given sample or measurement was collected
+          dateTime
+          
+            
+              YYYY-MM-DD
+              
+            
+          
+        
+        
+          exp_week
+          exp_week
+          Number of weeks since the start of the experiment (July 1, 1999)
+          float
+          
+            
+              
+                number
+              
+              
+                integer
+              
+            
+          
+        
+        
+          min_temp
+          min_temp
+          Minimum water temperature measured during the preceding week
+          float
+          
+            
+              
+                celsius
+              
+              
+                real
+              
+            
+          
+        
+        
+          max_temp
+          max_temp
+          Maximum water temperature measured during the preceding week
+          float
+          
+            
+              
+                celsius
+              
+              
+                real
+              
+            
+          
+        
+        
+          salinity
+          salinity
+          Water column salinity measured at seagrass canopy height
+          float
+          
+            
+              
+                practicalSalinityUnit
+              
+              
+                real
+              
+            
+          
+          
+            NA
+            missing measurement
+          
+        
+      
+      no
+      180
+    
+  
+  
+    
+      
+        
+          A measure of the available leaf surface area (units of square meters) within one square meter of substrate. In effect, this makes Leaf Area Index unitless.
+        
+        
+          Practical salinity units are equivalent to units of both permil and parts per thousand (ppt). 
+        
+      
+    
+  
+  
+    
+      
+    
+  
