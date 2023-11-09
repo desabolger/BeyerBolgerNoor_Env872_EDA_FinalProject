@@ -51,7 +51,7 @@ temp_processed <- temp %>%
   mutate(mean_temp = (min_temp + max_temp) / 2) %>%
   na.omit()
 
-# selecting date and growth length
+# selecting date and growth length 
 linear_growth_processed <- linear_growth %>% 
   select(date, gr_length)
 
