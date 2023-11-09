@@ -28,3 +28,41 @@ plot(pressure)
 ```
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+```{r setup}
+library(tidyverse)
+library(here)
+library(lubridate)
+here()
+```
+```{r, loading in data}
+temp_sal <- read.csv(here("./Data/Raw/Temperature-Salinity.csv"), stringsAsFactors = TRUE)
+temp_sal$date <- as.Date(temp_sal$date)
+view(temp_sal)
+prod_rates <- read.csv(here("./Data/Raw/Seagrass-production-rates.csv"), stringsAsFactors = TRUE)
+prod_rates$date <- as.Date(prod_rates$date)
+view(prod_rates)
+```
+
+```{r}
+temp_sal_clean <- select(temp_sal, "treatment":"date", "min_temp":"salinity")
+
+prod_rates_clean <- select(prod_rates, "treatment", "date", "gr_mass")
+
+```
+
+```{r}
+temp_sal_oid <- temp_sal_clean %>%
+  mutate("OID" = paste0(temp_sal_clean$treatment, "-", temp_sal_clean$date))
+
+view(temp_sal_oid)
+
+prod_rates_oid <- prod_rates_clean %>%
+  mutate("OID2" = paste0(prod_rates_clean$treatment, "-", prod_rates_clean$date))
+view(prod_rates_oid)
+```
+
+```{r}
+
+```
+
