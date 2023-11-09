@@ -1,0 +1,70 @@
+```{r}
+library(readr)
+library(ggplot2)
+```
+
+
+```{r import data, check class}
+Seagrass_production_rates <- read_csv("Data/Raw/Seagrass-production-rates.csv")
+View(Seagrass_production_rates)
+class(Seagrass_production_rates$date) #its already a date
+```
+
+
+```{r visualize data}
+
+ggplot(Seagrass_production_rates, aes(x = date, y = gr_mass)) +
+geom_point(alpha = 0.5, size = 1.5) +
+#stat_smooth(method = lm, se = F, color = 'red')+
+xlab(expression(paste("Date" )))+
+ylab(expression(paste("Mass (g)")))+
+labs(title = "Date vs. Grams of Seagrass Production")+
+  theme_bw()
+
+#could do time series with this
+
+ggplot(Seagrass_production_rates, aes(x = treatment, y = gr_mass)) +
+geom_boxplot() +
+#stat_smooth(method = lm, se = F, color = 'red')+
+xlab(expression(paste("Date" )))+
+ylab(expression(paste("Mass (g)")))+
+labs(title = "Treatment Group vs. Grams of Seagrass Production")+
+  theme_bw()
+
+ggplot(Seagrass_production_rates, aes(x = plot, y = gr_mass, color = treatment)) +
+geom_point() +
+#stat_smooth(method = lm, se = F, color = 'red')+
+xlab(expression(paste("Plot #" )))+
+ylab(expression(paste("Mass (g)")))+
+labs(title = "Plot vs. Grams of Seagrass Production")+
+  theme_bw()
+
+ggplot(Seagrass_production_rates, aes(x = date, y = gr_mass, color = treatment)) +
+geom_point() +
+  facet_wrap(vars(treatment), ncol = 1)+
+#stat_smooth(method = lm, se = F, color = 'red')+
+xlab(expression(paste("Date" )))+
+ylab(expression(paste("Mass (g)")))+
+labs(title = "Date vs. Grams of Seagrass Production by Treatment Group")+
+  theme_bw()
+
+ggplot(Seagrass_production_rates, aes(x = interval, y = gr_mass)) +
+geom_point() +
+  facet_wrap(vars(treatment), ncol = 1)+
+#stat_smooth(method = lm, se = F, color = 'red')+
+xlab(expression(paste("Interval" )))+
+ylab(expression(paste("Mass (g)")))+
+labs(title = "Interval vs. Grams of Seagrass Production by Treatment Group")+
+  theme_bw()
+
+
+ggplot(Seagrass_production_rates, aes(x = exp_week, y = gr_mass)) +
+geom_point() +
+  facet_wrap(vars(treatment), ncol = 1)+
+#stat_smooth(method = lm, se = F, color = 'red')+
+xlab(expression(paste("Experiment Week" )))+
+ylab(expression(paste("Mass (g)")))+
+labs(title = "Experiment Week vs. Grams of Seagrass Production by Treatment Group")+
+  theme_bw()
+```
+
