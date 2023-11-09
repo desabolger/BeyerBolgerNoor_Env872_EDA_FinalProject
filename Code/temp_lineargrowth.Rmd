@@ -13,6 +13,16 @@ knitr::opts_chunk$set(echo = TRUE)
 
 This is an R Markdown document for the final project in EDA. This document explores the relationship between temperature and linear growth rates of seagrass.
 
+## Notes
+
+For temp/salinity, readings were taken on the same day for either summer/reference or winter/reference. 
+
+Linear growth readings were not taken the same days as the temp/salinity.
+
+ex_week (experiment week) seems to be the consistent variable across all the data collected. We could use this join the data frames
+
+## Set up code
+
 ```{r setup}
 #Import libraries
 library(tidyverse)
@@ -23,7 +33,7 @@ library(here)
 here()
 ```
 
-## Including Plots
+## Code for cleaning data
 
 You can also embed plots, for example:
 
@@ -47,16 +57,37 @@ linear_growth$date <- as.Date(linear_growth$date)
 ```{r wrangling data}
 # selecting the date and temp columns, creating a mean temp column, and getting ride of possible NAs
 temp_processed <- temp %>% 
-  select(date, min_temp, max_temp) %>%
+  select(date, min_temp, max_temp, exp_week) %>%
   mutate(mean_temp = (min_temp + max_temp) / 2) %>%
   na.omit()
 
 # selecting date and growth length 
 linear_growth_processed <- linear_growth %>% 
-  select(date, gr_length)
+  select(date, gr_length, exp_week)
 
 ```
 
+```{r creating object ID}
 
+temp_processed_OID <- temp_processed %>%
+  mutate(OID = paste(treatment, date))
 
+linear_growth_processed_OID <- linear_growth_processed %>%
+  mutate(OID = paste(treatment, date))
+
+temp_lineargrowth <- full_join(temp_processed, linear_growth_processed, by = "date")
+
+```
+
+## Code for Plotting
+
+```{r}
+
+```
+
+## Code for analysis
+
+```{r}
+
+```
 
