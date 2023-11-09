@@ -1,0 +1,62 @@
+---
+title: "temp_lineargrowth.rdm"
+author: "Emma Beyer"
+date: "2023-11-07"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document for the final project in EDA. This document explores the relationship between temperature and linear growth rates of seagrass.
+
+```{r setup}
+#Import libraries
+library(tidyverse)
+library(lubridate)
+library(here)
+
+#Check that here points to the project folder
+here()
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r importing data}
+# import temperature data
+temp <-  read.csv("Data/Raw/Temperature-Salinity.csv")
+
+#import linear growth data
+linear_growth <- read.csv("Data/Raw/Seagrass-linear-growth-rates.csv")
+```
+
+```{r changing dates}
+# change temp date column
+temp$date <- as.Date(temp$date)
+
+# change dat column
+linear_growth$date <- as.Date(linear_growth$date)
+
+```
+
+```{r wrangling data}
+# selecting the date and temp columns, creating a mean temp column, and getting ride of possible NAs
+temp_processed <- temp %>% 
+  select(date, min_temp, max_temp) %>%
+  mutate(mean_temp = (min_temp + max_temp) / 2) %>%
+  na.omit()
+
+# selecting date and growth length
+linear_growth_processed <- linear_growth %>% 
+  select(date, gr_length)
+
+```
+
+
+
+
