@@ -48,40 +48,68 @@ linear_growth <- read.csv("Data/Raw/Seagrass-linear-growth-rates.csv")
 ```{r changing dates}
 # change temp date column
 temp$date <- as.Date(temp$date)
+# creating a month column
+
 
 # change dat column
 linear_growth$date <- as.Date(linear_growth$date)
+# creating a month column
 
 ```
 
 ```{r wrangling data}
 # selecting the date and temp columns, creating a mean temp column, and getting ride of possible NAs
 temp_processed <- temp %>% 
-  select(date, min_temp, max_temp, exp_week) %>%
+  filter(treatment == "reference") %>%
   mutate(mean_temp = (min_temp + max_temp) / 2) %>%
+  select(date, mean_temp, exp_week) %>% 
   na.omit()
 
 # selecting date and growth length 
 linear_growth_processed <- linear_growth %>% 
+  filter(treatment == "reference") %>%
   select(date, gr_length, exp_week)
-
 ```
 
-```{r creating object ID}
+```{r joining dataframes}
 
-temp_processed_OID <- temp_processed %>%
-  mutate(OID = paste(treatment, date))
-
-linear_growth_processed_OID <- linear_growth_processed %>%
-  mutate(OID = paste(treatment, date))
-
-temp_lineargrowth <- full_join(temp_processed, linear_growth_processed, by = "date")
+temp_lineargrowth <- full_join(temp_processed, linear_growth_processed, by = "exp_week")
 
 ```
 
 ## Code for Plotting
 
 ```{r}
+
+growth_time_plot <-
+ggplot(temp_lineargrowth,aes(x=date.x,y=gr_length)) + 
+  geom_point() + 
+  geom_smooth(method = "lm") +
+  labs(title = "Growth Length v Time",
+       subtitle = "EDA Project",
+       y="Growth Length (cm)",
+       x="Date")
+plot(growth_time_plot)
+
+temp_time_plot <-
+ggplot(temp_lineargrowth,aes(x=date.x,y=mean_temp)) + 
+  geom_point() + 
+  geom_smooth(method = "lm") +
+  labs(title = "Temp v Time",
+       subtitle = "EDA Project",
+       y="Temperature (C)",
+       x="Date")
+plot(temp_time_plot)
+
+growth_temp_plot <-
+ggplot(temp_lineargrowth,aes(x=mean_temp,y=gr_length)) + 
+  geom_point() + 
+  geom_smooth(method = "lm") +
+  labs(title = "Growth Length v Temp",
+       subtitle = "EDA Project",
+       y="Growth Length (cm)",
+       x="Temperature (C)")
+plot(growth_temp_plot)
 
 ```
 
