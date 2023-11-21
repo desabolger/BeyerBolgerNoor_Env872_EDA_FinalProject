@@ -1,13 +1,12 @@
 ---
-title: "temp_lineargrowth.rdm"
+title: "Influences of Temperature and Salinity on Seagrass Linear Growth"
 author: "Emma Beyer"
-date: "2023-11-07"
+date: "EDA Final Project - Fall 2023"
 output: pdf_document
+geometry: margin=2.54cm
+editor_options: 
+  chunk_output_type: console
 ---
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
 
 ## R Markdown
 
@@ -15,25 +14,34 @@ This is an R Markdown document for the final project in EDA. This document explo
 
 ## Notes
 
-For temp/salinity, readings were taken on the same day for either summer/reference or winter/reference. 
+For temp/salinity, readings were taken on the same day for either summer/reference or winter/reference. We decided to only use the reference measurements to keep the data uniform.
 
-Linear growth readings were not taken the same days as the temp/salinity.
+Linear growth readings were not taken the same days as the temp/salinity. They were usually taken the following day.
 
-ex_week (experiment week) seems to be the consistent variable across all the data collected. We could use this join the data frames
+ex_week (experiment week) is the consistent variable across all the data collected. We used this to join the data frames. 
 
-## Set up code
+## Set up
 
 ```{r setup}
-#Import libraries
+# import libraries
 library(tidyverse)
 library(lubridate)
 library(here)
 
-#Check that here points to the project folder
+# check that here points to the project folder
 here()
+
+# setting plot theme
+mytheme <- theme_classic(base_size = 14) +
+  theme(axis.text = element_text(color = "darkblue"), 
+        title = element_text(color='darkgreen'),
+        panel.grid.major = element_line(color = "gray", linetype = "solid"))
+# set theme
+theme_set(mytheme)
+
 ```
 
-## Code for cleaning data
+## Cleaning Data
 
 You can also embed plots, for example:
 
@@ -41,15 +49,20 @@ You can also embed plots, for example:
 # import temperature data
 temp <-  read.csv("Data/Raw/Temperature-Salinity.csv")
 
-#import linear growth data
+# import salinity data
+salinity <-  read.csv("Data/Raw/Temperature-Salinity.csv")
+
+# import linear growth data
 linear_growth <- read.csv("Data/Raw/Seagrass-linear-growth-rates.csv")
+
 ```
 
 ```{r changing dates}
 # change temp date column
 temp$date <- as.Date(temp$date)
-# creating a month column
 
+# change salinity date column
+salinity$date <- as.Date(salinity$date)
 
 # change dat column
 linear_growth$date <- as.Date(linear_growth$date)
@@ -58,51 +71,85 @@ linear_growth$date <- as.Date(linear_growth$date)
 ```
 
 ```{r wrangling data}
-# selecting the date and temp columns, creating a mean temp column, and getting ride of possible NAs
+# filtering for only reference data (represents whole experiment time)
+# creating a mean temp column
+# selecting needed columns
+# getting rid of possible NAs
 temp_processed <- temp %>% 
   filter(treatment == "reference") %>%
   mutate(mean_temp = (min_temp + max_temp) / 2) %>%
   select(date, mean_temp, exp_week) %>% 
   na.omit()
 
-# selecting date and growth length 
+# filtering for only reference data (represents whole experiment time)
+# selecting needed columns
+# getting rid of possible NAs
+salinity_processed <- salinity %>%
+  filter(treatment == "reference") %>%
+  select(date, salinity, exp_week) %>% 
+  na.omit()
+
+
+# filtering for only reference data (represents whole experiment time) 
+# selecting needed columns
 linear_growth_processed <- linear_growth %>% 
   filter(treatment == "reference") %>%
   select(date, gr_length, exp_week)
+
 ```
 
 ```{r joining dataframes}
+# joining temp data and linear growth by using experiment week
+temp_lineargrowth <- full_join(temp_processed, 
+                               linear_growth_processed, 
+                               by = "exp_week")
 
-temp_lineargrowth <- full_join(temp_processed, linear_growth_processed, by = "exp_week")
+# selecting the full date column and removing NAs
+temp_lineargrowth_processed <- temp_lineargrowth %>%
+  select(date.x, mean_temp, gr_length) %>%
+  na.omit()
+
+# joining salinity data and linear growth by using experiment week
+salinity_lineargrowth <- full_join(salinity_processed, 
+                                   linear_growth_processed, 
+                                   by = "exp_week")
+
+# selecting the full date column and removing NAs
+salinity_lineargrowth_processed <- salinity_lineargrowth %>%
+  select(date.x, salinity, gr_length) %>%
+  na.omit()
 
 ```
 
-## Code for Plotting
 
-```{r}
+## Plotting Temperature
 
+```{r temp plots}
+# plot of linear growth over time
 growth_time_plot <-
-ggplot(temp_lineargrowth,aes(x=date.x,y=gr_length)) + 
+ggplot(temp_lineargrowth_processed,aes(x=date.x,y=gr_length)) + 
   geom_point() + 
-  geom_smooth(method = "lm") +
+  geom_smooth(method = 'loess') +
   labs(title = "Growth Length v Time",
        subtitle = "EDA Project",
        y="Growth Length (cm)",
        x="Date")
 plot(growth_time_plot)
 
+# plot of temperature over time
 temp_time_plot <-
-ggplot(temp_lineargrowth,aes(x=date.x,y=mean_temp)) + 
+ggplot(temp_lineargrowth_processed,aes(x=date.x,y=mean_temp)) + 
   geom_point() + 
-  geom_smooth(method = "lm") +
+  geom_smooth(method = 'loess') +
   labs(title = "Temp v Time",
        subtitle = "EDA Project",
        y="Temperature (C)",
        x="Date")
 plot(temp_time_plot)
 
+# plot comparing linear growth to temperature
 growth_temp_plot <-
-ggplot(temp_lineargrowth,aes(x=mean_temp,y=gr_length)) + 
+ggplot(temp_lineargrowth_processed,aes(x=mean_temp,y=gr_length)) + 
   geom_point() + 
   geom_smooth(method = "lm") +
   labs(title = "Growth Length v Temp",
@@ -112,10 +159,65 @@ ggplot(temp_lineargrowth,aes(x=mean_temp,y=gr_length)) +
 plot(growth_temp_plot)
 
 ```
+> Results: The first graph suggest that seagrass linear growth fluctuated over time seemingly with the seasons. The second graph demonstrations the seasonal shift in temperature. The third graph suggests a positive relationship between seagrass linear growth and temperature. 
 
-## Code for analysis
 
-```{r}
+## Temperature Analysis
+
+```{r temp linear regression}
+temp_growth_regression <- 
+  lm(data = temp_lineargrowth_processed,
+     mean_temp ~ gr_length)
+summary(temp_growth_regression)
+```
+> Results: p-value = < 2.2e-16, r-squared = 0.4335.  This confirms a significant positive relationship between temperature and seagrass linear growth. This means that seagrass linear growth increases as the temperature increses. 
+
+## Plotting Salinity
+
+```{r salinity plots}
+# plot of salinity over time
+salinity_time_plot <-
+ggplot(salinity_lineargrowth_processed,aes(x=date.x,y=salinity)) + 
+  geom_point() + 
+  geom_smooth(method = 'lm') +
+  labs(title = "Salinity v Time",
+       subtitle = "EDA Project",
+       y="Salinity (g/kg)",
+       x="Date")
+plot(salinity_time_plot)
+
+# plot comparing linear growth to salinity
+growth_salinity_plot <-
+ggplot(salinity_lineargrowth_processed,aes(x=salinity,y=gr_length)) + 
+  geom_point() + 
+  geom_smooth(method = "lm") +
+  labs(title = "Growth Length v Salinity",
+       subtitle = "EDA Project",
+       y="Growth Length (cm)",
+       x="Salinity (g/kg)")
+plot(growth_salinity_plot)
 
 ```
 
+> Results: The first graph suggests that salinity is increasing over time. The second graph suggests a negative relationship between salinity and seagrass linear growth.  
+
+## Salinity Analysis
+
+```{r salinity linear regression}
+# linear regression of salinity and linear growth
+salinity_growth_regression <- 
+  lm(data = salinity_lineargrowth_processed,
+     salinity ~ gr_length)
+summary(salinity_growth_regression)
+
+# linear regression of salinity and time
+salinity_time_regression <- 
+  lm(data = salinity_lineargrowth_processed,
+     salinity ~ date.x)
+summary(salinity_time_regression)
+
+```
+
+> Results: For salinity and linear growth the p-value 1.256e-15 and r-squared = 0.1273. This confirms a significant negative relationship between salinity and seagrass linear growth. This means that as salinity increases, seagrass seagrass linear growth decreases. 
+
+> Results: For salinity over time the p-value < 2.2e-16 and r-squared = 0.3869. This confirms a significant positive relationship between salinity over time. This means that salinity was increasing over the time of the experiment. 
