@@ -1,0 +1,120 @@
+---
+title: "Seagrass_vs_Production_Rates"
+author: "Desa Bolger"
+date: "2023-11-23"
+output: pdf_document
+---
+
+
+```{r setup}
+# import libraries
+library(tidyverse)
+library(readr)
+library(ggplot2)
+library(lubridate)
+library(here)
+
+# check that here points to the project folder
+here()
+
+# setting plot theme
+mytheme <- theme_classic(base_size = 14) +
+  theme(axis.text = element_text(color = "darkblue"), 
+        title = element_text(color='darkgreen'),
+        panel.grid.major = element_line(color = "gray", linetype = "solid"))
+# set theme
+theme_set(mytheme)
+
+```
+
+
+```{r import data, check class}
+
+Seagrass_production_rates <- read_csv("Data/Raw/Seagrass-production-rates.csv")
+#View(Seagrass_production_rates)
+class(Seagrass_production_rates$date) #it is already a date
+temp_sal <- read.csv(here("./Data/Raw/Temperature-Salinity.csv"), stringsAsFactors = TRUE)
+temp_sal$date <- as.Date(temp_sal$date)
+#view(temp_sal)
+
+```
+
+
+```{r cleaning up data}
+# filtering for only reference data (represents whole experiment time)
+# creating a mean temp column
+# selecting needed columns
+# getting rid of possible NAs
+temp_processed <- temp_sal %>% 
+  filter(treatment == "reference") %>%
+  mutate(mean_temp = (min_temp + max_temp) / 2) %>%
+  select(date, mean_temp, exp_week) %>% 
+  na.omit()
+#view(temp_processed)
+
+prod_rates_clean <- Seagrass_production_rates %>%
+  select("treatment", "date", "exp_week", "gr_mass") %>%
+  filter(treatment == "reference") %>%
+  group_by(date) %>%
+  summarise(meangrowth = mean(gr_mass), exp_week = median(exp_week)) %>%
+  mutate(treatment = "reference")
+#view(prod_rates_clean)
+
+#ADD THIS SAVED IN PROCESS FOLDER
+```
+
+```{r join data}
+temp_production_rate <- full_join(temp_processed, 
+                               prod_rates_clean, 
+                               by = "exp_week")
+
+# selecting the full date column and removing NAs
+temp_production_rate_processed <- temp_production_rate %>%
+  select(date.x, mean_temp, exp_week, meangrowth) %>%
+  na.omit()
+view(temp_production_rate_processed)
+```
+
+```{r save processed data as a file}
+#ADD THIS SAVED IN PROCESS FOLDER
+```
+
+```{r new visualizations}
+
+ggplot(temp_production_rate_processed, aes(x = mean_temp, y = meangrowth)) +
+geom_point() +
+  geom_smooth(method = 'loess') +
+xlab("Mean Temperature (C)")+
+ylab("Mean Growth (g DM m-2 d-1)")+
+labs(title = "Mean Temperature vs. Mean Growth of Seagrass Production")
+
+
+ggplot(temp_production_rate_processed, aes(x = date.x, y = meangrowth)) +
+geom_point() +
+  geom_smooth(method = 'loess') +
+xlab("Date")+
+ylab("Mean Growth (g DM m-2 d-1)")+
+labs(title = "Date vs. Mean Growth of Seagrass Production")
+
+
+ggplot(temp_production_rate_processed, aes(x = date.x, y = mean_temp)) +
+geom_point() +
+  geom_smooth(method = 'loess') +
+xlab("Date")+
+ylab("Mean Temperature (C)")+
+labs(title = "Date vs. Mean Growth of Seagrass Production")
+
+```
+
+```{r run stats on the data}
+temp_growth_regression <-
+  lm(data = temp_production_rate_processed, mean_temp ~ meangrowth) 
+summary(temp_growth_regression)
+
+#According to this test, temperature significantly impacts seagrass production
+#rate.  P < 3.06 e-10, R^2 = 0.7504.  ProductionRate = 9.6257(temp) + 20.0372 
+```
+
+
+```
+
