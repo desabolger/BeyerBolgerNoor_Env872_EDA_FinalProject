@@ -1,81 +1,107 @@
 ---
 title: "Salinity_vs_Production_Rates"
 author: "Nusrat Noor"
-date: "2023-11-09"
+date: "Fall 2023"
 output: pdf_document
+geometry: margin=2.54cm
+editor_options: 
+  chunk_output_type: console
 ---
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
 
 ## R Markdown
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+This is an R Markdown document for the Fall 2023 final project in EDA. This document explores the relationship between salinity and production rates of seagrass.
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+## Notes
 
-```{r cars}
-summary(cars)
-```
+For temp/salinity, readings were taken on the same day for either summer/reference or winter/reference. We decided to only use the reference measurements to keep the data uniform.
 
-## Including Plots
+Production rate (mass growth) readings were not taken the same days as the temp/salinity. They were usually taken the following day.
 
-You can also embed plots, for example:
+ex_week (experiment week) is the consistent variable across all the data collected. We used this to join the data frames. 
 
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+## Setup
 
 ```{r setup}
+#loading in necessary packages
 library(tidyverse)
 library(here)
 library(lubridate)
+
+#checked directory
 here()
+
+#create and set theme
+mytheme <- theme_grey(base_size = 14) +
+  theme(axis.title = element_text(colour = "darkred"),
+        title = element_text(colour = "darkred"),
+        axis.text = element_text(colour = "darkblue"))
+theme_set(mytheme)
 ```
-```{r, loading in data}
+
+## Importing and Cleaning Data
+
+```{r, load in data}
+#read in the temp/salinity data
 temp_sal <- read.csv(here("./Data/Raw/Temperature-Salinity.csv"), stringsAsFactors = TRUE)
+
+#set date column as date
 temp_sal$date <- as.Date(temp_sal$date)
-view(temp_sal)
+
+#read in production rate  data
 prod_rates <- read.csv(here("./Data/Raw/Seagrass-production-rates.csv"), stringsAsFactors = TRUE)
+
+#set date column as date
 prod_rates$date <- as.Date(prod_rates$date)
-view(prod_rates)
 ```
 
-```{r}
+```{r, wrangle the data}
+#filtered out the reference treatment only
+#omitted any NAs
 temp_sal_clean <- temp_sal %>%
-  filter(treatment == "reference")
-view(temp_sal_clean)
+  filter(treatment == "reference") %>%
+  na.omit()
 
+#selected the desired columns 
+#filtered out just the reference treatment
+#calculated the mean mass growth
+#omitted any NAs
 prod_rates_clean <- prod_rates %>%
   select("treatment", "date", "exp_week", "gr_mass") %>%
   filter(treatment == "reference") %>%
   group_by(date) %>%
   summarise(meangrowth = mean(gr_mass), exp_week = median(exp_week)) %>%
-  mutate(treatment = "reference")
-
-view(prod_rates_clean)
-
+  mutate(treatment = "reference") %>%
+  na.omit()
 ```
 
-```{r}
-joined <- left_join(x = prod_rates_clean, y = temp_sal_clean, join_by(exp_week ==exp_week, treatment ==treatment)) %>%
-  mutate(joined, meantemp = ((min_temp + max_temp)/2))
+```{r, Join data frames}
+#joined the salinity and production rate data frames together by the experiment week
+joined <- left_join(x = prod_rates_clean, y = temp_sal_clean, join_by(exp_week ==exp_week, treatment ==treatment))
 
+#set date column as date
 joined$date.x <- as.Date(joined$date.x)
-view(joined)
 ```
 
-```{r}
-ggplot(joined, aes(x = meangrowth, y = salinity)) +
-  geom_point() +
-  geom_smooth()
+## Plotting the Data
 
-ggplot(joined, aes(x = meantemp, y = meangrowth)) +
+```{r, Plot the data}
+#plotted salinity by production rate
+ggplot(joined, aes(y = meangrowth, x = salinity)) +
   geom_point() +
-  geom_smooth(method = "lm")
-
+  geom_smooth(method = "lm", se = FALSE, color = "darkblue") +
+  labs(y = "Production Rate", x = "Salinity (g/kg)", 
+       title = "Salinity v Production Rate",
+       subtitle = "EDA Project")
 ```
+> Results: There is a  slight decrease in production rates as salinity increases but the data is fairly dispersed.
 
+## Salinity Analysis
+
+```{r, salinity regression}
+#ran linear regression
+sal_prod_regression <- 
+  lm(data = joined, salinity ~ meangrowth)
+summary(sal_prod_regression)
+```
+> Results: The p-value is 0.6956 and r-squared is -0.02894. There is no significant relationship between salinity and production rates of seagrass. 
