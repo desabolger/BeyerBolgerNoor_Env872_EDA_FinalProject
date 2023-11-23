@@ -93,6 +93,14 @@ ggplot(joined, aes(y = meangrowth, x = salinity)) +
   labs(y = "Production Rate", x = "Salinity (g/kg)", 
        title = "Salinity v Production Rate",
        subtitle = "EDA Project")
+
+#plotted salinity over time
+ggplot(joined, aes(x = date.x, y = salinity)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE, color = "darkblue") +
+  labs(x = "Date", y = "Salinity (g/kg)", 
+       title = "Salinity v Date", 
+       subtitle = "EDA Project")
 ```
 > Results: There is a  slight decrease in production rates as salinity increases but the data is fairly dispersed.
 
