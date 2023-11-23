@@ -77,7 +77,8 @@ prod_rates_clean <- prod_rates %>%
 
 ```{r, Join data frames}
 #joined the salinity and production rate data frames together by the experiment week
-joined <- left_join(x = prod_rates_clean, y = temp_sal_clean, join_by(exp_week ==exp_week, treatment ==treatment))
+joined <- left_join(x = prod_rates_clean, y = temp_sal_clean, 
+                    join_by(exp_week ==exp_week, treatment ==treatment))
 
 #set date column as date
 joined$date.x <- as.Date(joined$date.x)
