@@ -33,7 +33,8 @@ theme_set(mytheme)
 Seagrass_production_rates <- read_csv("Data/Raw/Seagrass-production-rates.csv")
 #View(Seagrass_production_rates)
 class(Seagrass_production_rates$date) #it is already a date
-temp_sal <- read.csv(here("./Data/Raw/Temperature-Salinity.csv"), stringsAsFactors = TRUE)
+temp_sal <- read.csv(here("./Data/Raw/Temperature-Salinity.csv"), 
+                     stringsAsFactors = TRUE)
 temp_sal$date <- as.Date(temp_sal$date)
 #view(temp_sal)
 
@@ -51,6 +52,8 @@ temp_processed <- temp_sal %>%
   select(date, mean_temp, exp_week) %>% 
   na.omit()
 #view(temp_processed)
+write.csv(temp_processed, row.names = FALSE,
+file = "Data/Processed/PROCESSED_Temperature.csv")
 
 prod_rates_clean <- Seagrass_production_rates %>%
   select("treatment", "date", "exp_week", "gr_mass") %>%
@@ -60,7 +63,8 @@ prod_rates_clean <- Seagrass_production_rates %>%
   mutate(treatment = "reference")
 #view(prod_rates_clean)
 
-#ADD THIS SAVED IN PROCESS FOLDER
+write.csv(prod_rates_clean, row.names = FALSE,
+file = "Data/Processed/PROCESSED_Seagrass-production-rates.csv")
 ```
 
 ```{r join data}
@@ -73,10 +77,10 @@ temp_production_rate_processed <- temp_production_rate %>%
   select(date.x, mean_temp, exp_week, meangrowth) %>%
   na.omit()
 view(temp_production_rate_processed)
-```
 
-```{r save processed data as a file}
-#ADD THIS SAVED IN PROCESS FOLDER
+write.csv(temp_production_rate_processed, row.names = FALSE,
+file = "Data/Processed/PROCESSED_temp_Production_rate.csv")
+
 ```
 
 ```{r new visualizations}
@@ -86,7 +90,7 @@ geom_point() +
   geom_smooth(method = 'loess') +
 xlab("Mean Temperature (C)")+
 ylab("Mean Growth (g DM m-2 d-1)")+
-labs(title = "Mean Temperature vs. Mean Growth of Seagrass Production")
+labs(title = "Mean Temp vs. Mean Growth of Seagrass Production")
 
 
 ggplot(temp_production_rate_processed, aes(x = date.x, y = meangrowth)) +
