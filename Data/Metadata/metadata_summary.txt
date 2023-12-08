@@ -1,0 +1,122 @@
+Metadata of the data set used for this analysis.
+
+uid=EDI,o=EDI,dc=edirepository,dc=orgall
+      https://orcid.org/0000-0003-4072-5623
+      
+doi:10.6073/pasta/601ae427b99c240e6df52c0737efbab3
+
+Paper Title: 
+Seagrass growth rates and physical characteristics and measures of water temperature and salinity during a simulated green turtle grazing experiment in The Bahamas, 1999 – 2000.
+
+Authors:  
+          Dr.  Robert Johnson
+          University of Wisconsin-Madison
+          robert.a.johnson@wisc.edu
+          0000-0003-4072-5623
+        
+        
+          Dr.  Kathleen Hanes
+          Washington University in St. Louis
+          khanes@wustl.edu
+        
+        
+          Dr. Alan Bolten
+          University of Florida
+          abolten@ufl.edu
+          0000-0002-4834-2742
+        
+        
+          Dr. Karen Bjorndal
+          University of Florida
+          bjorndal@ufl.edu
+          0000-0002-6286-1901
+
+Experiment:
+This data set contains data from an experiment in which green turtle grazing was simulated in a Thalassia testudinum seagrass meadow in The Bahamas from July 1999 until December 2000.
+
+Data Collection:
+  Temperature and Salinity
+    Measurements of water temperature and salinity were collected weekly. 
+    
+    Environmental temperature (minimum and maximum values) and salinity were measured weekly.     Temperatures were recorded from a minimum-maximum thermometer permanently deployed at         seagrass canopy height at one location within each block of plots, and thermometers were      re-set each week after reading. Salinity values were measured from a water sample             collected near each thermometer at seagrass canopy height using a hand-held refractometer     calibrated before each use.
+
+  Seagrass Characteristics
+    Seagrass meadow physical characteristics--blade length, blade width, number of blades per     shoot, shoot density, and leaf area index--along with growth rates (both linear growth and     production) were measured at various temporal intervals. 
+    
+    Seagrass structural characteristics (blade length, blade width, shoot density, number of      blades per shoot) were measured in all plots prior to the initiation of clipping and every     two weeks thereafter. Shoot density and number of blades per shoot were measured in situ      from three randomly placed 25 x 25 cm quadrats (0.0625 m2) in each plot, and blade            morphometry (length and width) was measured in situ from 30 randomly selected blades in       each plot. Structural characteristics were then used to calculate one-sided leaf area         index (often abbreviated as LAI) (Enríquez and Pantoja-Reyes 2005)—a measure of the           available photosynthetic leaf area within one square meter of meadow.
+
+  Grazing Simulation
+    Grazing was simulated in experimental plots (n = 20; 15 summer- and 5 winter-initiated        plots) by clipping all seagrass blades within the plot area at the blade-sheath junction      with scissors (Moran and Bjorndal 2005) resulting in shoot heights ~2 cm above the            sediment surface. To mimic the natural grazing regime of green turtles in this region,        blades were re-clipped each time mean blade length within a plot reached 5 cm (range of 12     – 37 days depending on growth conditions), and all clipped blades were collected and          removed to simulate green turtle consumption and removal of seagrass biomass and nutrients     (Bjorndal 1980; Ogden 1980). Rhizomes were severed around the edge of each clipped plot at     the beginning of the experiment, and thereafter every 6 – 8 weeks, to prevent nutrient        translocation into the plots as part of a separate experiment (Moran and Bjorndal 2007).      To avoid possible edge effects from the surrounding ungrazed seagrass, all samples were       collected from the inner 2x2 m area of plots leaving a 0.5 m wide buffer zone on all          sides.This experimental regime was maintained for the 16-month duration of the experiment. 
+
+    Measurements were made in each of three treatments: 1) an unclipped reference treatment       (representing ungrazed seagrass) in which measurements began in July 1999, 2) an              experimentally clipped treatment (representing grazing) in which measurements began in        July 1999, and 3) an experimentally clipped treatment (representing grazing) in which         measurements began in February 2000. 
+
+Research Goal:
+Investigate relationships between water temperature and salinity on seagrass growth and physical characteristics and how these relationships are affected by green turtle grazing.
+
+Location:
+Lee Stocking Island, Exumas, The Bahamas
+        
+          -76.2051
+          -76.0328
+          23.8448
+          23.6906
+
+Experiement Time Frame:
+1999-07-01 to 2000-12-15
+
+Seagrass Species Classification:
+          Superdomain
+          Biota
+          1
+          
+            Kingdom
+            Plantae
+            plants
+            3
+            
+              Subkingdom
+              Viridiplantae
+              368663
+              
+                Infrakingdom
+                Streptophyta
+                536191
+                
+                  Class
+                  Magnoliopsida
+                  182757
+                  
+                    Superorder
+                    Lilianae
+                    449895
+                    
+                      Order
+                      Alismatales
+                      153491
+                      
+                        Family
+                        Hydrocharitaceae
+                        143751
+                        
+                          Genus
+                          Thalassia
+                          turtlegrass
+                          206854
+                          
+                            Species
+                            Thalassia testudinum
+                            turtle grass
+                            374720
+
+Data collection for this project is complete, and updates are not currently planned for this data set. Please contact the corresponding author with any identified issues or questions.
+      notPlanned
+    
+      Dr. Robert Johnson
+      University of Wisconsin-Madison
+      robert.a.johnson@wisc.edu
+      0000-0003-4072-5623
+    
+Environmental Data Initiative
+info@edirepository.org
+https://edirepository.org0330j0z60
+Environmental Data Initiative
