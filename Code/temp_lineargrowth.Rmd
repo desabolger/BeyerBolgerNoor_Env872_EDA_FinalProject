@@ -130,8 +130,7 @@ growth_time_plot <-
 ggplot(temp_lineargrowth_processed,aes(x=date.x,y=gr_length)) + 
   geom_point() + 
   geom_smooth(method = 'loess') +
-  labs(title = "Growth Length v Time",
-       subtitle = "EDA Project",
+  labs(title = "Date vs. Seagrass Growth Length",
        y="Growth Length (cm)",
        x="Date")
 plot(growth_time_plot)
@@ -141,9 +140,8 @@ temp_time_plot <-
 ggplot(temp_lineargrowth_processed,aes(x=date.x,y=mean_temp)) + 
   geom_point() + 
   geom_smooth(method = 'loess') +
-  labs(title = "Temp v Time",
-       subtitle = "EDA Project",
-       y="Temperature (C)",
+  labs(title = "Date vs. Water Temperature",
+       y="Temperature (" * degree~C * ")",
        x="Date")
 plot(temp_time_plot)
 
@@ -152,10 +150,9 @@ growth_temp_plot <-
 ggplot(temp_lineargrowth_processed,aes(x=mean_temp,y=gr_length)) + 
   geom_point() + 
   geom_smooth(method = "lm") +
-  labs(title = "Growth Length v Temp",
-       subtitle = "EDA Project",
+  labs(title = " Seagrass Growth Length vs. Water Temperature",
        y="Growth Length (cm)",
-       x="Temperature (C)")
+       x="Temperature (" * degree~C * ")")
 plot(growth_temp_plot)
 
 ```
@@ -180,8 +177,7 @@ salinity_time_plot <-
 ggplot(salinity_lineargrowth_processed,aes(x=date.x,y=salinity)) + 
   geom_point() + 
   geom_smooth(method = 'lm') +
-  labs(title = "Salinity v Time",
-       subtitle = "EDA Project",
+  labs(title = "Date vs. Salinity",
        y="Salinity (g/kg)",
        x="Date")
 plot(salinity_time_plot)
@@ -191,8 +187,7 @@ growth_salinity_plot <-
 ggplot(salinity_lineargrowth_processed,aes(x=salinity,y=gr_length)) + 
   geom_point() + 
   geom_smooth(method = "lm") +
-  labs(title = "Growth Length v Salinity",
-       subtitle = "EDA Project",
+  labs(title = "Seagrass Growth Length vs. Salinity",
        y="Growth Length (cm)",
        x="Salinity (g/kg)")
 plot(growth_salinity_plot)

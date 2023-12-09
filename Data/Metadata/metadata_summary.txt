@@ -1,0 +1,167 @@
+Metadata of the data set used for this analysis.
+
+uid=EDI,o=EDI,dc=edirepository,dc=orgall
+      https://orcid.org/0000-0003-4072-5623
+      
+doi:10.6073/pasta/601ae427b99c240e6df52c0737efbab3
+
+Paper Title: 
+Seagrass growth rates and physical characteristics and measures of water temperature and salinity during a simulated green turtle grazing experiment in The Bahamas, 1999 – 2000.
+
+Authors:  
+          Dr.  Robert Johnson
+          University of Wisconsin-Madison
+          robert.a.johnson@wisc.edu
+          0000-0003-4072-5623
+        
+        
+          Dr.  Kathleen Hanes
+          Washington University in St. Louis
+          khanes@wustl.edu
+        
+        
+          Dr. Alan Bolten
+          University of Florida
+          abolten@ufl.edu
+          0000-0002-4834-2742
+        
+        
+          Dr. Karen Bjorndal
+          University of Florida
+          bjorndal@ufl.edu
+          0000-0002-6286-1901
+
+Experiment:
+This data set contains data from an experiment in which green turtle grazing was simulated in a Thalassia testudinum seagrass meadow in The Bahamas from July 1999 until December 2000.
+
+Data Collection:
+  Temperature and Salinity
+    Measurements of water temperature and salinity were collected weekly. 
+    
+    Environmental temperature (minimum and maximum values) and salinity were measured weekly.     Temperatures were recorded from a minimum-maximum thermometer permanently deployed at         seagrass canopy height at one location within each block of plots, and thermometers were      re-set each week after reading. Salinity values were measured from a water sample             collected near each thermometer at seagrass canopy height using a hand-held refractometer     calibrated before each use.
+
+  Seagrass Characteristics
+    Seagrass meadow physical characteristics--blade length, blade width, number of blades per     shoot, shoot density, and leaf area index--along with growth rates (both linear growth and     production) were measured at various temporal intervals. 
+    
+    Seagrass structural characteristics (blade length, blade width, shoot density, number of      blades per shoot) were measured in all plots prior to the initiation of clipping and every     two weeks thereafter. Shoot density and number of blades per shoot were measured in situ      from three randomly placed 25 x 25 cm quadrats (0.0625 m2) in each plot, and blade            morphometry (length and width) was measured in situ from 30 randomly selected blades in       each plot. Structural characteristics were then used to calculate one-sided leaf area         index (often abbreviated as LAI) (Enríquez and Pantoja-Reyes 2005)—a measure of the           available photosynthetic leaf area within one square meter of meadow.
+    
+    Aboveground biomass was measured in all plots prior to the initiation of clipping by          collecting all seagrass blades from within three randomly placed 25 x 25 cm quadrats (0       .0625 m2). Biomass was measured in this same manner throughout the experiment in reference     plots at two, six, eleven, and sixteen months. Following the initiation of clipping,          biomass in clipped plots was measured using all blades collected from the inner 4 m2 area     of each plot at each clipping event (when mean blade length reached 5 cm). For each plot,     collected blades were cleaned of epiphytes and rinsed with seawater in the laboratory, and     dry mass was measured after drying at 60 ℃ to constant weight.
+
+    Linear growth rates (i.e. vertical blade growth) were measured using different methods for     clipped and reference treatments, so as to avoid repeated destructive sampling within         reference plots (Moran and Bjorndal 2005). Since all blades in clipped plots were clipped     at the blade-sheath junction at each clipping event, linear growth rates (mm d-1) were        calculated from the measured blade length of 30 randomly selected blades from each plot at     the time of clipping (since all tissue was new growth) divided by the number of days since     the previous clipping event. Linear growth in reference plots was estimated using the leaf     staple method (Zieman 1974) throughout the experiment at roughly two-week intervals. A        staple was placed just above the blade-sheath junction in 30 randomly selected blades in      each reference plot, and after roughly two weeks (mean 13 days) the new growth between the     staple and the blade-sheath junction was measured and divided by the number of days since     stapling.
+    
+    Rates of mass growth (i.e., production) were measured using different methods for clipped     and reference treatments. Production (g DM m-2 d-1) in clipped plots was measured at the      time of each clipping event, and the dry mass of all blades collected from the inner 4 m2     of each plot (then standardized to 1 m2) was divided by the number of days since the          previous clipping event. To avoid repeated destructive sampling in reference plots, rates     of production were estimated from other measured metrics using the equation:
+
+    ((SD × BPS × AG × MPA)) / days
+
+    where SD and BPS are shoot density and blades-per-shoot, respectively. AG is blade area       growth (mm2 blade-1 d-1) and was calculated using the mean linear growth rate and blade       width for each plot following each growth interval. MPA is mass per area of blade (g mm-2     ), which is a measure of the mass of one square millimeter of seagrass blade tissue, and      can be used to estimate production when blade area growth (AG) is known. MPA was              calculated for each clipped plot following clipping events using measured blade length,       blade width, blades per shoot, shoot density, and aboveground biomass, and these values of     MPA were used to estimate reference plot production assuming MPA to be equivalent for         clipped and unclipped blades.
+    
+  Grazing Simulation
+    Grazing was simulated in experimental plots (n = 20; 15 summer- and 5 winter-initiated        plots) by clipping all seagrass blades within the plot area at the blade-sheath junction      with scissors (Moran and Bjorndal 2005) resulting in shoot heights ~2 cm above the            sediment surface. To mimic the natural grazing regime of green turtles in this region,        blades were re-clipped each time mean blade length within a plot reached 5 cm (range of 12     – 37 days depending on growth conditions), and all clipped blades were collected and          removed to simulate green turtle consumption and removal of seagrass biomass and nutrients     (Bjorndal 1980; Ogden 1980). Rhizomes were severed around the edge of each clipped plot at     the beginning of the experiment, and thereafter every 6 – 8 weeks, to prevent nutrient        translocation into the plots as part of a separate experiment (Moran and Bjorndal 2007).      To avoid possible edge effects from the surrounding ungrazed seagrass, all samples were       collected from the inner 2x2 m area of plots leaving a 0.5 m wide buffer zone on all          sides.This experimental regime was maintained for the 16-month duration of the experiment. 
+
+    Measurements were made in each of three treatments: 1) an unclipped reference treatment       (representing ungrazed seagrass) in which measurements began in July 1999, 2) an              experimentally clipped treatment (representing grazing) in which measurements began in        July 1999, and 3) an experimentally clipped treatment (representing grazing) in which         measurements began in February 2000. 
+    
+  Seagrass aboveground biomass
+    Aboveground seagrass biomass data for the reference treatment, summer-initiated clipped       treatment, and winter-initiated clipped treatment throughout the experiment.
+  
+  Text borrowed from the associated publication: 
+  Johnson et al. 2022. Limnology and Oceanography
+      
+  Effects of green turtle grazing on seagrass ecosystems
+      
+    Dr.  Robert Johnson
+    University of Wisconsin-Madison
+    robert.a.johnson@wisc.edu
+    0000-0003-4072-5623
+    Lead Investigator
+      
+Research Goal:
+Investigate relationships between water temperature and salinity on seagrass growth and physical characteristics and how these relationships are affected by green turtle grazing.
+
+Location:
+Lee Stocking Island, Exumas, The Bahamas
+        
+          -76.2051
+          -76.0328
+          23.8448
+          23.6906
+
+Experiement Time Frame:
+1999-07-01 to 2000-12-15
+
+Seagrass Species Classification:
+          Superdomain
+          Biota
+          1
+          
+            Kingdom
+            Plantae
+            plants
+            3
+            
+              Subkingdom
+              Viridiplantae
+              368663
+              
+                Infrakingdom
+                Streptophyta
+                536191
+                
+                  Class
+                  Magnoliopsida
+                  182757
+                  
+                    Superorder
+                    Lilianae
+                    449895
+                    
+                      Order
+                      Alismatales
+                      153491
+                      
+                        Family
+                        Hydrocharitaceae
+                        143751
+                        
+                          Genus
+                          Thalassia
+                          turtlegrass
+                          206854
+                          
+                            Species
+                            Thalassia testudinum
+                            turtle grass
+                            374720
+                            
+Experimental Variables:
+Variable - Unit - Ranges - Notes
+
+Date - Calendar Days - 07/08/1999-12/13/2000 - NAs removed
+
+min_temp - Celcius - 21.50-31.00 - Max temperature taken that day
+
+max_temp - Calcius - 24.83-31.00 - Min temperature taken that day
+
+mean_temp - Celcius - 23.415-31.750 - (min_temp + max_temp)/2
+
+gr_mass - g DM m-2 d-1 - 0.224-1.872 - Production growth rates
+
+meangrowth - g DM m-2 d-1 - 0.4716667-1.2384667 - Mean production growth rate
+
+exp_week - Weeks - 5-75 - Experiment Week
+
+salinity - g/kg - 33.67-41.00 - Salinity levels
+
+gr_length - cm - 0.955-4.856 - Linear Growth
+
+Data collection for this project is complete, and updates are not currently planned for this data set. Please contact the corresponding author with any identified issues or questions.
+      notPlanned
+    
+      Dr. Robert Johnson
+      University of Wisconsin-Madison
+      robert.a.johnson@wisc.edu
+      0000-0003-4072-5623
+    
+Environmental Data Initiative
+info@edirepository.org
+https://edirepository.org0330j0z60
+Environmental Data Initiative
