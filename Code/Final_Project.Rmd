@@ -1,6 +1,9 @@
 ---
 title: "Impacts of Abiotic Factors on Seagrass Growth"
-author: "Emma Beyer" "Nusrat Noor" "Desa Bolger"
+author: 
+- "Emma Beyer" 
+- "Nusrat Noor" 
+- "Desa Bolger"
 date: "EDA Final Project - Fall 2023"
 output: pdf_document
 geometry: margin=2.54cm
@@ -12,8 +15,271 @@ editor_options:
 
 This is an R Markdown document for the final project in EDA. This document explores the impacts of temperature and salinity on linear growth rates and production rates of the seagrass Thalassia testudinum.
 
-```{r pressure, echo=FALSE}
-plot(pressure)
+## Rationale
+
+  We chose a data set from the 2022 Johnson, Hanes, and Bolten publication titled “Seagrass growth rates and physical characteristics and measures of water temperature and salinity during a simulated green turtle grazing experiment in The Bahamas, 1999 – 2000.”  We chose to focus our research in the Bahamas because of the rich marine life in the area. This data set aims to understand how green turtle food consumption practices impact a specific species of seagrass (Thalassia testudinum).  We appreciated how thorough this data set was, as it tracked blade width, number of blades per shoot, blade length, shoot density, and even had a leaf index in order to understand how the seagrasses were changing.  
+  
+  We focused on the non-green turtle simulation group of the seagrass.  We wanted to see how abiotic factors (temperature and salinity) impacted marine species.  This data set also included weekly temperature and salinity sampling, which allowed us to understand if abiotic factors were influencing seagrass growth.  
+  
+Citation: Johnson, R.A., K.M. Hanes, A.B. Bolten, and K.A. Bjorndal. 2022. Seagrass growth rates and physical characteristics and measures of water temperature and salinity during a simulated green turtle grazing experiment in The Bahamas, 1999 – 2000. ver 1. Environmental Data Initiative. https://doi.org/10.6073/pasta/601ae427b99c240e6df52c0737efbab3 (Accessed 2023-11-25).
+
+### Research Questions
+
+1. Does temperature impact production rates of seagrass?
+2. Does salinity impact production rates of seagrass?
+3. Does temperature impact linear growth rates of seagrass?
+4. Does salinity impact linear growth rates of seagrass?
+
+## Dataset Information
+
+  We first imported the temperature (Temperature-Salinity.csv) and production rates (Seagrass-production-rates.csv) files.  We used as.Date() to convert all dates if needed to the right format and filtered each of the files to only include reference data.  
+  
+	For the temperature data, we used mutate() to add a mean temperature created from the min_temp and max_temp columns, selected date, mean_temp, and exp_week for our final processed table, and omitted NAs. This was saved as a processed file. To wrangle our production rate data, we selected the treatment, date, exp_week, and gr_mass columns and filtered by reference data.  We grouped by date, summarized the mean growth, and mutated to include the reference treatment. This data was then saved as a processed file. 
+	
+	These files were joined using a full_join by the experimental week. NAs were omitted and data was selected by date, mean_temp, exp_week, and mean_growth.  This file was saved as PROCESSED_temp_Production_rate.csv.
+
+```{r setup, echo=FALSE}
+# import libraries
+library(tidyverse)
+library(lubridate)
+library(here)
+library(knitr)
+
+# check that here points to the project folder
+here()
+
+# setting plot theme
+mytheme <- theme_classic(base_size = 14) +
+  theme(axis.text = element_text(color = "darkblue"), 
+        title = element_text(color='darkgreen'),
+        panel.grid.major = element_line(color = "gray", linetype = "solid"))
+# set theme
+theme_set(mytheme)
+
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+```{r table}
+
+```
+
+```{r importing data, echo=FALSE}
+
+# import temperature and salinity data
+temp_sal <- read.csv(here("./Data/Raw/Temperature-Salinity.csv"), stringsAsFactors = TRUE)
+temp_sal$date <- as.Date(temp_sal$date) # set as date
+#view(temp_sal)
+
+# import linear growth data
+linear_growth <- read.csv(here("./Data/Raw/Seagrass-linear-growth-rates.csv"))
+linear_growth$date <- as.Date(linear_growth$date) # set as date
+
+# import production rates data
+Seagrass_production_rates <- read_csv(here("./Data/Raw/Seagrass-production-rates.csv"))
+#View(Seagrass_production_rates)
+class(Seagrass_production_rates$date) #it is already a date
+
+```
+
+```{r, wrangle the data, echo=FALSE}
+# filtering for only reference data (represents whole experiment time)
+# creating a mean temp column
+# selecting needed columns
+# getting rid of possible NAs
+temp_processed <- temp_sal %>% 
+  filter(treatment == "reference") %>%
+  mutate(mean_temp = (min_temp + max_temp) / 2) %>%
+  select(date, mean_temp, exp_week) %>% 
+  na.omit()
+
+#filtered out the reference treatment only
+#omitted any NAs
+salinity_processed <- temp_sal %>%
+  filter(treatment == "reference") %>%
+  select(date, salinity, exp_week) %>% 
+  na.omit()
+
+#selected the desired columns 
+#filtered out just the reference treatment
+#calculated the mean mass growth
+#omitted any NAs
+prod_rates_clean <- Seagrass_production_rates %>%
+  select("treatment", "date", "exp_week", "gr_mass") %>%
+  filter(treatment == "reference") %>%
+  group_by(date) %>%
+  summarise(meangrowth = mean(gr_mass), exp_week = median(exp_week)) %>%
+  mutate(treatment = "reference") %>%
+  na.omit()
+
+# filtering for only reference data (represents whole experiment time) 
+# selecting needed columns
+linear_growth_processed <- linear_growth %>% 
+  filter(treatment == "reference") %>%
+  select(date, gr_length, exp_week)
+```
+
+```{r join data, echo=FALSE}
+temp_production_rate <- full_join(temp_processed, 
+                               prod_rates_clean, 
+                               by = "exp_week")
+
+# selecting the full date column and removing NAs
+temp_production_rate_processed <- temp_production_rate %>%
+  select(date.x, mean_temp, exp_week, meangrowth) %>%
+  na.omit()
+#view(temp_production_rate_processed)
+
+#joined the salinity and production rate data frames together by the experiment week
+salinity_prod_rates <- full_join(salinity_processed, prod_rates_clean,
+                                 by = "exp_week")
+# selecting the full date column and removing NAs
+sal_prod_processed <- salinity_prod_rates %>%
+  select(date.x, salinity, exp_week, meangrowth) %>%
+  na.omit()
+
+# joining temp data and linear growth by using experiment week
+temp_lineargrowth <- full_join(temp_processed, 
+                               linear_growth_processed, 
+                               by = "exp_week")
+
+# selecting the full date column and removing NAs
+temp_lineargrowth_processed <- temp_lineargrowth %>%
+  select(date.x, mean_temp, gr_length) %>%
+  na.omit()
+
+# joining salinity data and linear growth by using experiment week
+salinity_lineargrowth <- full_join(salinity_processed, 
+                                   linear_growth_processed, 
+                                   by = "exp_week")
+
+# selecting the full date column and removing NAs
+salinity_lineargrowth_processed <- salinity_lineargrowth %>%
+  select(date.x, salinity, gr_length) %>%
+  na.omit()
+
+```
+
+## Exploratory Analysis 
+
+```{r datevtemp, fig.cap= "Relationship between date and mean temperature (° C) in the study site region in the Bahamas. Temperature was lowest in February 2000 (23.415 ° C) and highest in July 2000 (31.750 ° C).", echo=FALSE}
+
+ggplot(temp_production_rate_processed, aes(x = date.x, y = mean_temp)) +
+geom_point() +
+  geom_smooth(method = 'loess') +
+xlab("Date")+
+ylab("Mean Temperature (C)")+
+labs(title = "Date vs. Mean Temperature")
+```
+
+```{r date vs production rate, fig.cap= "Relationship between date and mean growth rate of the seagrass (in g DM m^-2^ d^-1^) in the study site region in the Bahamas. Mean growth is highest in August 1999 (1.2384667 g DM m^-2^ d^-1^) and lowest in February 2000 (0.4716667 g DM m^-2^ d^-1^).", echo=FALSE}
+
+ggplot(temp_production_rate_processed, aes(x = date.x, y = meangrowth)) +
+geom_point() +
+  geom_smooth(method = 'loess') +
+xlab("Date")+
+ylab("Mean Growth (g DM m-2 d-1)")+
+labs(title = "Date vs. Mean Growth of Seagrass Production")
+```
+
+Both Figures 1 and Figures 2 share a remarkably similar relationship and curvature. Given the location of the Bahamas, it makes sense that the weather is coldest in the winter (December to March) and warmest in the summer (June to August).  The fact that these figures are so similar suggests that there may be a relationship between mean growth and temperature for the seagrass, but more analysis is needed. 
+
+```{r date vs salinity, fig.cap= "Relationship between date and salinity (g/kg). The lowest salinity was recorded in November 1999 (25.00 g/kg) and the highest was recorded in May 2000 (40.67 g/kg). This suggests a positive relationship where salinity is increasing over the study time.", echo=FALSE}
+
+# plot of salinity over time
+salinity_time_plot <-
+ggplot(salinity_lineargrowth_processed,aes(x=date.x,y=salinity)) + 
+  geom_point() + 
+  geom_smooth(method = 'lm') +
+  labs(title = "Date vs. Salinity",
+       y="Salinity (g/kg)",
+       x="Date")
+plot(salinity_time_plot)
+
+# linear regression of salinity and time
+salinity_time_regression <- 
+  lm(data = salinity_lineargrowth_processed,
+     salinity ~ date.x)
+summary(salinity_time_regression)
+```
+
+A linear regression was run to prove this relationship (p < 2.2e-16, R2 = 0.3869, df = 463). This confirms that there is a significant positive relationship between date and salinity. This means that salinity was increasing over time within the study site.
+
+```{r linear growth over time, fig.cap="Relationship between date and seagrass growth length (cm) within the study site. The highest amount of growth was recorded in July 1999 (4.856 cm) and lowest amount of growth was recorded in February 2000 (0.955 cm). ", echo=FALSE}
+
+# plot of linear growth over time
+growth_time_plot <-
+ggplot(temp_lineargrowth_processed,aes(x=date.x,y=gr_length)) + 
+  geom_point() + 
+  geom_smooth(method = 'loess') +
+  labs(title = "Date vs. Seagrass Growth Length",
+       y="Growth Length (cm)",
+       x="Date")
+plot(growth_time_plot)
+```
+
+## Analysis
+
+```{analysis, fig.cap="Relationship between mean temperature (° C) and seagrass mean growth (g DM m^-2^ d^-1^).", echo=FALSE}
+
+#plotted mean temp by production rates
+ggplot(temp_production_rate_processed, aes(x = mean_temp, y = meangrowth)) +
+geom_point() +
+  geom_smooth(method = "lm") +
+xlab("Mean Temperature (C)")+
+ylab("Mean Growth (g DM m-2 d-1)")+
+labs(title = "Mean Temp vs. Mean Growth of Seagrass Production")
+```
+
+A linear regression was run on the relationship between mean temperature and seagrass mean growth.  As is visible in Figure 3, ProductionRate = 9.6257(temp) + 20.0372.  According to this test, temperature significantly positively impacts seagrass production rate (p < 3.06 e^-10^, R^2^ = 0.7504). This makes sense given our exploratory graphs, where the figures tracking date versus mean temperature and mean growth had incredibly similar shapes. This supports our hypothesis that temperature impacts the linear growth rates of seagrass, given our p-value of less than 0.05.  
+
+```{r salinity vs production rates, fig.cap="Relationship between salinity (g/kg) and seagrass production rates (g DM m^-2^ d^-1^). The graph shows that there does not seem to be any relationship between the two variables.", echo=FALSE}
+
+#plotted salinity by production rate
+ggplot(salinity_prod_rates, aes(y = meangrowth, x = salinity)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE) +
+  labs(y = "Production Rate", x = "Salinity (g/kg)", 
+       title = "Salinity vs. Production Rate",
+       subtitle = "EDA Project")
+```
+
+A linear regression was run and showed there was not a significant relationship. The p-value is 0.6956 and r^2^ is -0.02894.
+
+```{r linear growth vs temp, fig.cap="Relationship between seagrass growth length (cm) and water temperature (° C). This suggests a positive relationship where as temperature increases, growth length also increases.", echo=FALSE}
+
+# plot comparing linear growth to temperature
+growth_temp_plot <-
+ggplot(temp_lineargrowth_processed,aes(x=mean_temp,y=gr_length)) + 
+  geom_point() + 
+  geom_smooth(method = "lm") +
+  labs(title = " Seagrass Growth Length vs. Water Temperature",
+       y="Growth Length (cm)",
+       x="Temperature (" * degree~C * ")")
+plot(growth_temp_plot)
+```
+
+A linear regression was run to prove this relationship (p < 2.2e^-16^, R^2^ = 0.4335, df = 463). This confirms that there is a significant positive relationship between temperature and seagrass linear growth. This means that seagrass linear growth increases as the temperature increases within the study site.
+
+```{r linear growth vs salinity, fig.cap="Relationship between seagrass growth length (cm) and salinity (g/kg). This suggests a negative relationship where as salinity increases, growth length decreases.", echo=FALSE}
+# plot comparing linear growth to salinity
+growth_salinity_plot <-
+ggplot(salinity_lineargrowth_processed,aes(x=salinity,y=gr_length)) + 
+  geom_point() + 
+  geom_smooth(method = "lm") +
+  labs(title = "Seagrass Growth Length vs. Salinity",
+       y="Growth Length (cm)",
+       x="Salinity (g/kg)")
+plot(growth_salinity_plot)
+```
+A linear regression was run to prove this relationship (p = 1.256e^-15^, R^2^ = 0.1273, df = 463). This confirms that there is a significant negative relationship between seagrass linear growth and salinity. This means that seagrass linear growth decreases as the salinity increases within the study site.
+
+## Summary  and Conclusions
+
+  Through our analysis, we were able to answer all of our research questions. We found that there is a positive relationship between temperature and seagrass production rates/mean growth (Figure 6). Our linear regression produced a p-value of < 3.06 e^-10^, making the relationship significant. With an R^2^ of 0.7504, we can conclude that 75% of the variance in production rates is explained by temperature. 
+
+  On the other hand, we found that salinity does not have a relationship with seagrass production rates (Figure 7). This was corroborated by our linear regression test which gave us a p-value of 0.6956 and an R^2^ is -0.02894. Even within the plot, while there was a slight negative trend where production rates decreased as salinity decreased, the data was fairly random and widely dispersed. 
+  
+  Temperature and salinity both had significant relationships with the linear growth rates of the seagrass Thalassia testudinum. Our results showed that as temperature increased, so did the growth length with a significant p-value of < 2.2e^-16^. The R^2^ came out to be 0.4335, meaning that 43% of the variance in linear growth lengths is explained by the temperature (Figure 8). Salinity and linear growth have an inverse relationship with a significant p-value of 1.256e^-15^. As salinity increased, linear growth rates decreased. However, with an R^2^ of 0.1273, only about 13% of the variance in linear growth rates was explained by salinity changes Figure 9). 
+  
+  Ultimately, our analysis was able to show us if and how abiotic factors impacted the growth of the seagrass Thalassia testudinum in the Bahamas. 
+
+
