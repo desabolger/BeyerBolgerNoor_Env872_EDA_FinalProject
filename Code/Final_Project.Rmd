@@ -1,0 +1,19 @@
+---
+title: "Impacts of Abiotic Factors on Seagrass Growth"
+author: "Emma Beyer" "Nusrat Noor" "Desa Bolger"
+date: "EDA Final Project - Fall 2023"
+output: pdf_document
+geometry: margin=2.54cm
+editor_options: 
+  chunk_output_type: console
+---
+
+## R Markdown
+
+This is an R Markdown document for the final project in EDA. This document explores the impacts of temperature and salinity on linear growth rates and production rates of the seagrass Thalassia testudinum.
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
