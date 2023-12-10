@@ -269,7 +269,8 @@ plot(growth_temp_plot)
 
 A linear regression was run to prove this relationship (p < 2.2e^-16^, R^2^ = 0.4335, df = 463). This confirms that there is a significant positive relationship between temperature and seagrass linear growth. This means that seagrass linear growth increases as the temperature increases within the study site.
 
-```{r linear growth vs salinity, fig.cap="Relationship between seagrass growth length (cm) and salinity (g/kg). This suggests a negative relationship where as salinity increases, growth length decreases.", echo=FALSE}
+```{r linear growth vs salinity, fig.cap=" Relationship between seagrass growth length (cm) and salinity (g/kg). This suggests a negative relationship where as salinity increases, growth length decreases.", echo=FALSE}
+
 # plot comparing linear growth to salinity
 growth_salinity_plot <-
 ggplot(salinity_lineargrowth_processed,aes(x=salinity,y=gr_length)) + 
@@ -280,6 +281,7 @@ ggplot(salinity_lineargrowth_processed,aes(x=salinity,y=gr_length)) +
        x="Salinity (g/kg)")
 plot(growth_salinity_plot)
 ```
+
 A linear regression was run to prove this relationship (p = 1.256e^-15^, R^2^ = 0.1273, df = 463). This confirms that there is a significant negative relationship between seagrass linear growth and salinity. This means that seagrass linear growth decreases as the salinity increases within the study site.
 
 ## Summary  and Conclusions
