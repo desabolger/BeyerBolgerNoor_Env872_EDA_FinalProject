@@ -51,7 +51,7 @@ temp_processed <- temp_sal %>%
   mutate(mean_temp = (min_temp + max_temp) / 2) %>%
   select(date, mean_temp, exp_week) %>% 
   na.omit()
-#view(temp_processed)
+view(temp_processed)
 write.csv(temp_processed, row.names = FALSE,
 file = "Data/Processed/PROCESSED_Temperature.csv")
 
@@ -87,7 +87,7 @@ file = "Data/Processed/PROCESSED_temp_Production_rate.csv")
 
 ggplot(temp_production_rate_processed, aes(x = mean_temp, y = meangrowth)) +
 geom_point() +
-  geom_smooth(method = 'loess') +
+  geom_smooth(method = "lm") +
 xlab("Mean Temperature (C)")+
 ylab("Mean Growth (g DM m-2 d-1)")+
 labs(title = "Mean Temp vs. Mean Growth of Seagrass Production")

@@ -39,6 +39,7 @@ Citation: Johnson, R.A., K.M. Hanes, A.B. Bolten, and K.A. Bjorndal. 2022. Seagr
   These files were joined using a full_join by the experimental week. NAs were omitted and data was selected by date, mean_temp, exp_week, and mean_growth. This file was saved as PROCESSED_temp_Production_rate.csv.
 
 ```{r setup, echo=FALSE}
+knitr::opts_chunk$set(warning = FALSE, message = FALSE)
 # import libraries
 library(tidyverse)
 library(lubridate)
@@ -73,7 +74,7 @@ salinity | g/kg | 33.67 - 41.00 | Salinity levels
 gr_length | cm | 0.955 - 4.856 | Linear Growth
 
 
-```{r importing data, echo=FALSE}
+```{r importing data, echo=FALSE, message=FALSE, warning=FALSE, show_col_types = FALSE}
 
 # import temperature and salinity data
 temp_sal <- read.csv(here("./Data/Raw/Temperature-Salinity.csv"), stringsAsFactors = TRUE)
@@ -87,11 +88,11 @@ linear_growth$date <- as.Date(linear_growth$date) # set as date
 # import production rates data
 Seagrass_production_rates <- read_csv(here("./Data/Raw/Seagrass-production-rates.csv"))
 #View(Seagrass_production_rates)
-class(Seagrass_production_rates$date) #it is already a date
+#class(Seagrass_production_rates$date) #it is already a date
 
 ```
 
-```{r, wrangle the data, echo=FALSE}
+```{r wrangle the data, message=FALSE, warning=FALSE, echo=FALSE}
 # filtering for only reference data (represents whole experiment time)
 # creating a mean temp column
 # selecting needed columns
@@ -128,7 +129,7 @@ linear_growth_processed <- linear_growth %>%
   select(date, gr_length, exp_week)
 ```
 
-```{r join data, echo=FALSE}
+```{r join data, echo=FALSE, message=FALSE, warning=FALSE}
 temp_production_rate <- full_join(temp_processed, 
                                prod_rates_clean, 
                                by = "exp_week")
