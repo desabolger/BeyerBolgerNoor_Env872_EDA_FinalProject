@@ -32,11 +32,11 @@ Citation: Johnson, R.A., K.M. Hanes, A.B. Bolten, and K.A. Bjorndal. 2022. Seagr
 
 ## Dataset Information
 
-  We first imported the temperature (Temperature-Salinity.csv) and production rates (Seagrass-production-rates.csv) files.  We used as.Date() to convert all dates if needed to the right format and filtered each of the files to only include reference data.  
+  We first imported the temperature (Temperature-Salinity.csv) and production rates (Seagrass-production-rates.csv) files.  We used as.Date() to convert all dates if needed to the right format and filtered each of the files to only include reference data.
   
-	For the temperature data, we used mutate() to add a mean temperature created from the min_temp and max_temp columns, selected date, mean_temp, and exp_week for our final processed table, and omitted NAs. This was saved as a processed file. To wrangle our production rate data, we selected the treatment, date, exp_week, and gr_mass columns and filtered by reference data.  We grouped by date, summarized the mean growth, and mutated to include the reference treatment. This data was then saved as a processed file. 
-	
-	These files were joined using a full_join by the experimental week. NAs were omitted and data was selected by date, mean_temp, exp_week, and mean_growth.  This file was saved as PROCESSED_temp_Production_rate.csv.
+  For the temperature data, we used mutate() to add a mean temperature created from the min_temp and max_temp columns, selected date, mean_temp, and exp_week for our final processed table, and omitted NAs. This was saved as a processed file. To wrangle our production rate data, we selected the treatment, date, exp_week, and gr_mass columns and filtered by reference data.  We grouped by date, summarized the mean growth, and mutated to include the reference treatment. This data was then saved as a processed file.
+  
+  These files were joined using a full_join by the experimental week. NAs were omitted and data was selected by date, mean_temp, exp_week, and mean_growth. This file was saved as PROCESSED_temp_Production_rate.csv.
 
 ```{r setup, echo=FALSE}
 # import libraries
@@ -58,9 +58,20 @@ theme_set(mytheme)
 
 ```
 
-```{r table}
+Table: Data Structure
 
-```
+Variable | Unit | Ranges | Notes
+:------------- | :------------- | :------------- | :-------------
+Date | Calendar Days | 07/08/1999 - 12/13/2000 | NAs removed
+min_temp | Celsius | 21.50- 31.00 | 
+max_temp | Celsius | 24.83 - 32.67 | 
+mean_temp | Celsius | 23.415- 31.750 | (Min_Temp + Max_Temp)/2
+gr_mass | g DM m^-2^ d^-1^ | 0.224 - 1.872 | Production growth rates
+meangrowth | g DM m^-2^ d^-1^ | 0.4716667 - 1.2384667 | Mean production growth rate
+exp_week | Weeks | 5 - 75 | Experiment Week
+salinity | g/kg | 33.67 - 41.00 | Salinity levels
+gr_length | cm | 0.955 - 4.856 | Linear Growth
+
 
 ```{r importing data, echo=FALSE}
 
@@ -236,10 +247,9 @@ A linear regression was run on the relationship between mean temperature and sea
 #plotted salinity by production rate
 ggplot(salinity_prod_rates, aes(y = meangrowth, x = salinity)) +
   geom_point() +
-  geom_smooth(method = "lm", se = FALSE) +
+  geom_smooth(method = "lm") +
   labs(y = "Production Rate", x = "Salinity (g/kg)", 
-       title = "Salinity vs. Production Rate",
-       subtitle = "EDA Project")
+       title = "Salinity vs. Production Rate")
 ```
 
 A linear regression was run and showed there was not a significant relationship. The p-value is 0.6956 and r^2^ is -0.02894.
